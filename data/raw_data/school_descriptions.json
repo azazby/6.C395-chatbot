@@ -1,0 +1,257 @@
+{
+  "1010": {
+    "description": "Boston Latin School is the oldest public school in America, founded in 1635. It is one of three exam schools in Boston (along with Boston Latin Academy and O'Bryant). BLS is a highly competitive 7-12 school known for rigorous classical education, strong college preparatory curriculum, and tradition of academic excellence.",
+    "programs": ["Advanced Placement (23+ AP courses)", "Classical education", "College preparatory", "Honors curriculum"],
+    "languages": ["Latin", "French", "Spanish", "Mandarin Chinese"],
+    "activities": ["Speech and Debate", "Model UN", "Math Team", "Science Olympiad", "Drama", "Orchestra", "Band", "Chorus", "Student Government", "Literary Magazine", "Newspaper"],
+    "special_admissions": "Exam school - requires ISEE/MAP scores and grades for admission. Application typically due in November.",
+    "transportation": "MBTA pass provided"
+  },
+  "1020": {
+    "description": "Boston Latin Academy is the second oldest public school in America, offering a rigorous college preparatory program. It is one of three BPS exam schools.",
+    "programs": ["Advanced Placement courses", "Honors curriculum", "College preparatory"],
+    "languages": ["Latin", "Spanish", "French"],
+    "activities": ["Athletics", "Drama", "Music", "Academic clubs", "Community service"],
+    "special_admissions": "Exam school - requires ISEE/MAP scores and grades for admission.",
+    "transportation": "MBTA pass provided"
+  },
+  "1030": {
+    "description": "The John D. O'Bryant School of Mathematics and Science is one of three BPS exam schools, with a focus on STEM education. Students take advanced math and science courses.",
+    "programs": ["STEM focus", "Advanced Placement courses", "Honors courses", "Research opportunities"],
+    "languages": ["Spanish", "French"],
+    "activities": ["Robotics", "Science Olympiad", "Math Team", "Athletics", "Music"],
+    "special_admissions": "Exam school - requires ISEE/MAP scores and grades for admission.",
+    "transportation": "MBTA pass provided"
+  },
+  "1040": {
+    "description": "Brighton High School offers career and technical education pathways. Recently received National Banner recognition from Special Olympics for inclusive programming.",
+    "programs": ["Career and Technical Education (CTE)", "Early College", "Inclusive education"],
+    "languages": ["Spanish", "Haitian Creole support"],
+    "activities": ["Special Olympics Unified Sports", "Athletics", "Clubs"],
+    "transportation": "MBTA pass or yellow bus depending on distance"
+  },
+  "1050": {
+    "description": "Charlestown High School serves the Charlestown neighborhood with college preparatory and career pathways.",
+    "programs": ["College preparatory", "Career pathways"],
+    "languages": ["Spanish"],
+    "activities": ["Athletics", "Drama", "Community service"],
+    "transportation": "MBTA pass or yellow bus depending on distance"
+  },
+  "1080": {
+    "description": "English High School is one of the oldest public high schools in the country, located in Jamaica Plain. Offers diverse academic and career programs.",
+    "programs": ["College preparatory", "Career pathways", "Dual enrollment"],
+    "languages": ["Spanish"],
+    "activities": ["Athletics", "Arts", "Clubs"],
+    "transportation": "MBTA pass"
+  },
+  "1070": {
+    "description": "East Boston High School serves the East Boston community with strong ESL/ELL support given the neighborhood's diverse immigrant population.",
+    "programs": ["ESL/ELL support", "College preparatory", "Career pathways"],
+    "languages": ["Spanish", "ESL programs in multiple languages"],
+    "activities": ["Athletics", "Arts", "Community programs"],
+    "transportation": "MBTA pass or yellow bus"
+  },
+  "1120": {
+    "description": "Burke High School in Dorchester, recently undergoing transformation efforts to improve student outcomes.",
+    "programs": ["College preparatory", "Career and Technical Education"],
+    "activities": ["Athletics", "Student clubs"],
+    "transportation": "MBTA pass or yellow bus"
+  },
+  "1162": {
+    "description": "Excel High School in South Boston offers small school environment with personalized learning.",
+    "programs": ["Small learning communities", "College preparatory"],
+    "activities": ["Athletics", "Arts", "Community service"],
+    "transportation": "MBTA pass or yellow bus"
+  },
+  "1200": {
+    "description": "Snowden International School at Copley offers an international baccalaureate-style education with global perspective. Students must apply separately.",
+    "programs": ["International focus", "Global studies", "College preparatory"],
+    "languages": ["Spanish", "French", "Mandarin Chinese"],
+    "activities": ["Model UN", "International clubs", "Arts", "Athletics"],
+    "special_admissions": "Special application required - interview and essay process.",
+    "transportation": "MBTA pass"
+  },
+  "1210": {
+    "description": "Madison Park Technical Vocational High School is Boston's only vocational-technical high school, offering hands-on career training combined with academics.",
+    "programs": ["Automotive Technology", "Carpentry", "Cosmetology", "Culinary Arts", "Electrical", "Graphic Communications", "Health Assisting", "HVAC/R", "Information Technology", "Metal Fabrication/Welding", "Plumbing", "Programming/Web Development", "Robotics/Engineering"],
+    "languages": ["Spanish"],
+    "activities": ["SkillsUSA", "Athletics", "Student government"],
+    "special_admissions": "Students may apply starting in grade 8. Tour and information sessions available.",
+    "transportation": "MBTA pass"
+  },
+  "1420": {
+    "description": "Boston Arts Academy is Boston's only public high school for the visual and performing arts. Students audition for admission in one of four arts majors.",
+    "programs": ["Visual Arts", "Music (Instrumental and Vocal)", "Dance", "Theater"],
+    "languages": ["Spanish"],
+    "activities": ["Performances", "Art exhibitions", "Community arts outreach"],
+    "special_admissions": "Audition required in one arts major. Application typically due January.",
+    "transportation": "MBTA pass"
+  },
+  "1440": {
+    "description": "Kennedy Health Careers Academy prepares students for careers in healthcare. Students explore medical and health science pathways.",
+    "programs": ["Health careers pathway", "Biomedical science", "Nursing preparation", "College preparatory"],
+    "activities": ["Health careers internships", "Athletics"],
+    "transportation": "MBTA pass"
+  },
+  "1460": {
+    "description": "TechBoston Academy is a pilot school offering technology-integrated education from grades 6-12.",
+    "programs": ["Technology integration", "1:1 laptop program", "College preparatory", "STEM focus"],
+    "activities": ["Robotics", "Technology clubs", "Athletics", "Arts"],
+    "transportation": "MBTA pass or yellow bus"
+  },
+  "4321": {
+    "description": "Alighieri Montessori School in East Boston offers a Montessori education approach for early learners, emphasizing hands-on, self-directed learning.",
+    "programs": ["Montessori method", "Multi-age classrooms", "Hands-on learning"],
+    "languages": ["Bilingual programs available"],
+    "activities": ["Arts integration", "Nature exploration"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4381": {
+    "description": "Eliot K-8 Innovation School in the North End is one of BPS's most sought-after schools, known for strong academics, community involvement, and a diverse student body. It serves both the North End and waterfront neighborhoods.",
+    "programs": ["Innovation school model", "Project-based learning", "Strong literacy program"],
+    "languages": ["Italian heritage program"],
+    "activities": ["Arts", "Music", "After-school enrichment", "Community garden"],
+    "before_after_school": "After-school programs available through community partners",
+    "transportation": "Walk zone / yellow bus for eligible students"
+  },
+  "4280": {
+    "description": "Harvard/Kent Elementary in Charlestown is a community school serving families in the Charlestown neighborhood.",
+    "programs": ["Standards-based curriculum", "Literacy focus"],
+    "activities": ["After-school programs", "Arts"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4283": {
+    "description": "Warren/Prescott K-8 School in Charlestown. Recently received National Banner recognition from Special Olympics for inclusive programming for students with and without disabilities.",
+    "programs": ["Inclusive education", "Unified sports", "K-8 continuity"],
+    "activities": ["Special Olympics Unified Sports", "Arts", "After-school programs"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4323": {
+    "description": "Mario Umana Academy K-8 in East Boston. Recently received Special Olympics National Banner recognition and new piano lab for music education. Serves the diverse East Boston community.",
+    "programs": ["Inclusive education", "Music program", "STEM"],
+    "languages": ["Spanish", "ESL support"],
+    "activities": ["Piano lab", "Special Olympics Unified Sports", "Arts", "Athletics"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4053": {
+    "description": "Hernandez K-8 School (Rafael Hernandez Two-Way Bilingual School) in Roxbury offers a dual-language immersion program in Spanish and English.",
+    "programs": ["Two-way bilingual immersion (Spanish/English)", "Dual language education"],
+    "languages": ["Spanish (immersion)", "English"],
+    "activities": ["Cultural celebrations", "Arts", "After-school programs"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4580": {
+    "description": "Trotter K-8 School in Dorchester. Recently received Special Olympics National Banner recognition for inclusive education.",
+    "programs": ["Inclusive education", "Community school model"],
+    "activities": ["Special Olympics Unified Sports", "Arts", "Community programs"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4650": {
+    "description": "Quincy Elementary School (Lower Campus K-5) in Chinatown serves a large Chinese-American community with strong bilingual programs.",
+    "programs": ["Bilingual education", "Chinese language and culture"],
+    "languages": ["Cantonese", "Mandarin", "English"],
+    "activities": ["Chinese New Year celebrations", "Arts", "After-school programs"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "1450": {
+    "description": "Quincy Upper School (grades 6-12) in Chinatown/South End, the upper campus of the Quincy school community, serves students with strong Asian heritage programs.",
+    "programs": ["Bilingual education", "College preparatory", "Chinese language"],
+    "languages": ["Cantonese", "Mandarin", "English"],
+    "activities": ["Cultural programs", "Athletics", "Arts"],
+    "transportation": "MBTA pass"
+  },
+  "4610": {
+    "description": "Horace Mann School for the Deaf and Hard of Hearing in Allston serves deaf and hard of hearing students across Boston. Historic school with first deaf school leader in 151 years appointed in 2025.",
+    "programs": ["Specialized deaf education", "American Sign Language (ASL)", "Total communication approach", "Inclusion programs"],
+    "languages": ["ASL (American Sign Language)", "English"],
+    "special_ed": "Specialized school for deaf and hard of hearing students. Full range of special education services.",
+    "activities": ["Deaf culture events", "Athletics", "Arts"],
+    "special_admissions": "Serves students who are deaf or hard of hearing. IEP referral typically required.",
+    "transportation": "Specialized transportation provided"
+  },
+  "4261": {
+    "description": "Carter Center is a special education school in the South End providing intensive services for students with significant disabilities.",
+    "special_ed": "Substantially separate special education programs for students with significant needs.",
+    "transportation": "Specialized transportation provided"
+  },
+  "1990": {
+    "description": "Boston International Newcomers Academy (BINCA) serves recently arrived immigrant and refugee students. Located in Dorchester.",
+    "programs": ["Newcomer support", "Intensive ESL/ELL", "Sheltered content instruction", "Native language literacy"],
+    "languages": ["ESL programs", "Native language support in Spanish, Haitian Creole, Cape Verdean Creole, Vietnamese, Chinese, Arabic, and more"],
+    "activities": ["Cultural celebrations", "Community integration programs"],
+    "transportation": "Yellow bus or MBTA pass"
+  },
+  "1991": {
+    "description": "Newcomers Academy provides transitional support for recently arrived immigrant students before they enter other BPS schools.",
+    "programs": ["Newcomer transition support", "Intensive ESL", "Academic preparation"],
+    "languages": ["Multi-language ESL support"],
+    "transportation": "Yellow bus or MBTA pass"
+  },
+  "4671": {
+    "description": "Mildred Avenue K-8 School in Mattapan serves the Mattapan community with a focus on academic achievement and community engagement.",
+    "programs": ["Standards-based curriculum", "Literacy initiative"],
+    "activities": ["Arts", "Athletics", "Community programs"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4600": {
+    "description": "Young Achievers K-8 Pilot School in Mattapan focuses on science and math with a social justice lens.",
+    "programs": ["Science and math focus", "Social justice curriculum", "Pilot school model"],
+    "activities": ["STEM projects", "Community service", "Arts"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4661": {
+    "description": "BTU (Boston Teachers Union) K-8 Pilot School in Jamaica Plain is a progressive, project-based pilot school.",
+    "programs": ["Project-based learning", "Pilot school model", "Arts integration"],
+    "activities": ["Arts", "Music", "Community projects"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4285": {
+    "description": "Mission Hill K-8 Pilot School in Jamaica Plain is a progressive pilot school known for experiential learning and democratic governance.",
+    "programs": ["Experiential learning", "Democratic school governance", "Pilot school model", "Theme-based curriculum"],
+    "activities": ["Arts integration", "Community projects", "Outdoor learning"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "1053": {
+    "description": "Margarita Muñiz Academy in Jamaica Plain is a dual-language high school (Spanish/English) preparing students for bilingual careers and higher education.",
+    "programs": ["Dual-language instruction (Spanish/English)", "College preparatory", "Career pathways"],
+    "languages": ["Spanish (instruction)", "English"],
+    "activities": ["Cultural events", "Community service", "Athletics"],
+    "special_admissions": "Open enrollment but designed for bilingual students.",
+    "transportation": "MBTA pass"
+  },
+  "1410": {
+    "description": "Boston Day and Evening Academy (BDEA) serves overage and under-credited students who need a flexible, alternative path to graduation.",
+    "programs": ["Alternative education", "Competency-based learning", "Flexible scheduling", "Day and evening sessions"],
+    "special_admissions": "For students who are overage for their grade or need an alternative educational setting.",
+    "transportation": "MBTA pass"
+  },
+  "1470": {
+    "description": "Boston Green Academy is a Horace Mann charter school in Brighton focused on environmental sustainability and green careers.",
+    "programs": ["Environmental sustainability focus", "Green careers pathways", "College preparatory"],
+    "activities": ["Environmental projects", "Sustainability clubs", "Athletics"],
+    "transportation": "MBTA pass"
+  },
+  "1265": {
+    "description": "Fenway High School is a small pilot school in Mission Hill known for personalized learning and strong college placement rates.",
+    "programs": ["Small school environment", "Personalized learning", "Pilot school model", "College preparatory"],
+    "activities": ["Arts", "Athletics", "Community partnerships with local colleges"],
+    "transportation": "MBTA pass"
+  },
+  "4680": {
+    "description": "Orchard Gardens K-8 School in Roxbury underwent a major turnaround and is now considered a model of school transformation in Boston.",
+    "programs": ["School turnaround model", "Extended learning time", "Arts integration"],
+    "activities": ["Visual arts", "Music", "Dance", "After-school programs"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "4570": {
+    "description": "Tobin K-8 School in Mission Hill/Roxbury serves a diverse community near the Longwood Medical Area.",
+    "programs": ["Standards-based curriculum", "Community partnerships with hospitals"],
+    "activities": ["Arts", "Science programs", "After-school enrichment"],
+    "transportation": "Yellow bus for eligible students"
+  },
+  "1215": {
+    "description": "Boston Adult Technical Academy (BATA) provides alternative education for adult learners seeking GED or high school equivalency.",
+    "programs": ["Adult education", "GED preparation", "Career training"],
+    "special_admissions": "For adult learners - age requirements apply."
+  }
+}
