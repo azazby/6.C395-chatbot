@@ -1,1312 +1,1001 @@
 [
   {
-    "sch_id": 4061,
-    "sch_name": "Guild Elementary",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.38879000000003,
-    "longitude": -71.00412000099993
-  },
-  {
-    "sch_id": 4541,
-    "sch_name": "Kennedy Patrick Elem",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.37853662100008,
-    "longitude": -71.03047970999995
-  },
-  {
-    "sch_id": 4322,
-    "sch_name": "Otis Elementary",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.37527000000006,
-    "longitude": -71.03389000099997
-  },
-  {
-    "sch_id": 4543,
-    "sch_name": "O'Donnell Elementary",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.37807994000008,
-    "longitude": -71.03801013299994
-  },
-  {
-    "sch_id": 1070,
-    "sch_name": "East Boston High",
-    "sch_type": "HS",
-    "neighborhood": "East Boston",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.38094877900005,
-    "longitude": -71.03492084999993
-  },
-  {
-    "sch_id": 4323,
-    "sch_name": "Umana/ Alighieri K-8",
-    "sch_type": "K-8",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.37828131600003,
-    "longitude": -71.04032923899996
-  },
-  {
-    "sch_id": 4450,
-    "sch_name": "East Boston EEC",
-    "sch_type": "ELC",
-    "neighborhood": "East Boston",
-    "grade_low": -2,
-    "grade_high": 0,
-    "latitude": 42.369667347000075,
-    "longitude": -71.03411936599997
-  },
-  {
-    "sch_id": 4360,
-    "sch_name": "McKay K-8",
-    "sch_type": "K-8",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.36926500000004,
-    "longitude": -71.03430699999996
-  },
-  {
-    "sch_id": 4361,
-    "sch_name": "Adams Elementary",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.365554330000066,
-    "longitude": -71.03488972799994
-  },
-  {
-    "sch_id": 4280,
-    "sch_name": "Harvard/Kent Elem",
-    "sch_type": "ES",
-    "neighborhood": "Charlestown",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.376619841000036,
-    "longitude": -71.05749165399999
-  },
-  {
-    "sch_id": 1050,
-    "sch_name": "Charlestown High",
-    "sch_type": "HS",
-    "neighborhood": "Charlestown",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.38011000000006,
-    "longitude": -71.06106999999997
-  },
-  {
-    "sch_id": 2010,
-    "sch_name": "Edwards Middle",
-    "sch_type": "MS",
-    "neighborhood": "Charlestown",
-    "grade_low": 6,
-    "grade_high": 8,
-    "latitude": 42.37907167900005,
-    "longitude": -71.06723064999994
-  },
-  {
-    "sch_id": 4283,
-    "sch_name": "Warren/Prescott",
-    "sch_type": "K-8",
-    "neighborhood": "Charlestown",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.37799000000007,
-    "longitude": -71.06442999899997
-  },
-  {
-    "sch_id": 4381,
-    "sch_name": "Eliot K-8",
-    "sch_type": "K-8",
-    "neighborhood": "North End",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.36609406700006,
-    "longitude": -71.05336907999998
-  },
-  {
-    "sch_id": 1450,
-    "sch_name": "Quincy Upper School",
-    "sch_type": "K-12",
-    "neighborhood": "Back Bay/South End",
-    "grade_low": -1,
-    "grade_high": 12,
-    "latitude": 42.348399622000045,
-    "longitude": -71.06904965299998
-  },
-  {
-    "sch_id": 4650,
-    "sch_name": "Quincy Lower (K-5)",
-    "sch_type": "K-12",
-    "neighborhood": "Chinatown/Downtown",
-    "grade_low": -2,
-    "grade_high": 5,
-    "latitude": 42.34797000000003,
-    "longitude": -71.06491999999997
-  },
-  {
-    "sch_id": 1200,
-    "sch_name": "Snowden International",
-    "sch_type": "HS",
-    "neighborhood": "Back Bay/South End",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.35057000000006,
-    "longitude": -71.07796999999994
-  },
-  {
-    "sch_id": 1291,
-    "sch_name": "McKinley Elementary",
-    "sch_type": "Special",
-    "neighborhood": "Back Bay/South End",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.34436000000005,
-    "longitude": -71.07351999899998
-  },
-  {
-    "sch_id": 1294,
-    "sch_name": "McKinley So. End Acad",
-    "sch_type": "Special",
-    "neighborhood": "Back Bay/South End",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.34436000000005,
-    "longitude": -71.07351999899998
-  },
-  {
-    "sch_id": 4260,
-    "sch_name": "Hurley Elementary",
-    "sch_type": "K-8",
-    "neighborhood": "South End",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.33875000000006,
-    "longitude": -71.07773999999995
-  },
-  {
-    "sch_id": 4640,
-    "sch_name": "Blackstone Elementary",
-    "sch_type": "ES",
-    "neighborhood": "South End",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.340728882000064,
-    "longitude": -71.07246047199999
-  },
-  {
-    "sch_id": 4121,
-    "sch_name": "Mason Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.32620836500007,
-    "longitude": -71.07133081199999
-  },
-  {
-    "sch_id": 4531,
-    "sch_name": "Clap Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.323167528000056,
-    "longitude": -71.05819075599999
-  },
-  {
-    "sch_id": 4022,
-    "sch_name": "Perkins Elementary",
-    "sch_type": "ES",
-    "neighborhood": "South Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.33131000000003,
-    "longitude": -71.05053999999996
-  },
-  {
-    "sch_id": 1162,
-    "sch_name": "Excel High",
-    "sch_type": "HS",
-    "neighborhood": "South Boston",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.33286000000004,
-    "longitude": -71.04488999999995
-  },
-  {
-    "sch_id": 4590,
-    "sch_name": "Tynan Elementary",
-    "sch_type": "ES",
-    "neighborhood": "South Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.33486203900003,
-    "longitude": -71.03841070199996
-  },
-  {
-    "sch_id": 4592,
-    "sch_name": "Perry K-8",
-    "sch_type": "K-8",
-    "neighborhood": "South Boston",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.332112100000074,
-    "longitude": -71.03019816399996
-  },
-  {
-    "sch_id": 4530,
-    "sch_name": "Russell Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.32037374600003,
-    "longitude": -71.05954881999997
-  },
-  {
-    "sch_id": 4680,
-    "sch_name": "Orchard Gardens K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.33026654300005,
-    "longitude": -71.07790842399999
-  },
-  {
-    "sch_id": 1256,
-    "sch_name": "West Roxbury Academy",
-    "sch_type": "HS",
-    "neighborhood": "West Roxbury",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.282259999000075,
-    "longitude": -71.17433999999997
-  },
-  {
-    "sch_id": 1325,
-    "sch_name": "Middle School Academy",
-    "sch_type": "Special",
-    "neighborhood": "South Boston",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.33356505300003,
-    "longitude": -71.05042906999995
-  },
-  {
-    "sch_id": 2450,
-    "sch_name": "UP Academy",
-    "sch_type": "MS",
-    "neighborhood": "South Boston",
-    "grade_low": 6,
-    "grade_high": 8,
-    "latitude": 42.33356505300003,
-    "longitude": -71.05042906999995
-  },
-  {
-    "sch_id": 1410,
-    "sch_name": "Boston Evening Academy",
-    "sch_type": "Special",
-    "neighborhood": "Roxbury",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.32702000000006,
-    "longitude": -71.08171000099998
-  },
-  {
-    "sch_id": 4261,
-    "sch_name": "Carter Center",
-    "sch_type": "Special",
-    "neighborhood": "South End",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.34055110600008,
-    "longitude": -71.08383937799994
-  },
-  {
-    "sch_id": 1210,
-    "sch_name": "Madison Park High",
-    "sch_type": "HS",
-    "neighborhood": "Mission Hill",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.331750000000056,
-    "longitude": -71.09028999999998
-  },
-  {
-    "sch_id": 1030,
-    "sch_name": "O'Bryant Math & Sci.",
-    "sch_type": "6/7-12",
-    "neighborhood": "Mission Hill",
-    "grade_low": 6,
-    "grade_high": 12,
-    "latitude": 42.33203000000003,
-    "longitude": -71.08879199999996
-  },
-  {
-    "sch_id": 2040,
-    "sch_name": "Timilty Middle",
-    "sch_type": "MS",
-    "neighborhood": "Roxbury",
-    "grade_low": 6,
-    "grade_high": 8,
-    "latitude": 42.33039000000008,
-    "longitude": -71.09096999999997
-  },
-  {
-    "sch_id": 4113,
-    "sch_name": "Hale Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.325540000000046,
-    "longitude": -71.09103999999996
-  },
-  {
-    "sch_id": 4242,
-    "sch_name": "Higginson/Lewis K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.32093967800006,
-    "longitude": -71.08630896899996
-  },
-  {
-    "sch_id": 4460,
-    "sch_name": "Haynes EEC",
-    "sch_type": "ELC",
-    "neighborhood": "Roxbury",
-    "grade_low": -2,
-    "grade_high": 0,
-    "latitude": 42.31495819000003,
-    "longitude": -71.07893853399997
-  },
-  {
-    "sch_id": 4580,
-    "sch_name": "Trotter K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.31573137100003,
-    "longitude": -71.08784045699997
-  },
-  {
-    "sch_id": 1020,
-    "sch_name": "Boston Latin Academy",
-    "sch_type": "6/7-12",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": 6,
-    "grade_high": 12,
-    "latitude": 42.31615000000005,
-    "longitude": -71.08449999999993
-  },
-  {
-    "sch_id": 4240,
-    "sch_name": "Ellis Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.316325636000045,
-    "longitude": -71.09289099599994
-  },
-  {
-    "sch_id": 4052,
-    "sch_name": "Winthrop Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.31819398600004,
-    "longitude": -71.07562600699998
-  },
-  {
-    "sch_id": 4055,
-    "sch_name": "King K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.31129100000004,
-    "longitude": -71.07619599999998
-  },
-  {
-    "sch_id": 2360,
-    "sch_name": "Frederick Pilot Middle",
-    "sch_type": "MS",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": 6,
-    "grade_high": 8,
-    "latitude": 42.30904536000003,
-    "longitude": -71.07541023199997
-  },
-  {
-    "sch_id": 4250,
-    "sch_name": "Holland Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.30560946700007,
-    "longitude": -71.07385842599996
-  },
-  {
-    "sch_id": 4350,
-    "sch_name": "Mather Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.30838754800004,
-    "longitude": -71.06101118299995
-  },
-  {
-    "sch_id": 4345,
-    "sch_name": "UP Academy Charter School of Dorchester",
-    "sch_type": "K-8",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.29991748600003,
-    "longitude": -71.07072884099995
-  },
-  {
-    "sch_id": 4391,
-    "sch_name": "Henderson Lower (K-3)",
-    "sch_type": "K-12",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -2,
-    "grade_high": 3,
-    "latitude": 42.29395806600007,
-    "longitude": -71.06222005599994
-  },
-  {
-    "sch_id": 4400,
-    "sch_name": "Murphy K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.294197516000054,
-    "longitude": -71.04919347499998
-  },
-  {
-    "sch_id": 4390,
-    "sch_name": "Kenny Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.28654159100006,
-    "longitude": -71.05319095299996
-  },
-  {
-    "sch_id": 1140,
-    "sch_name": "Henderson Upper (4-12)",
-    "sch_type": "K-12",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": 4,
-    "grade_high": 12,
-    "latitude": 42.28125306900006,
-    "longitude": -71.06956933699996
-  },
-  {
-    "sch_id": 4151,
-    "sch_name": "Taylor Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Mattapan",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.27785208900008,
-    "longitude": -71.07742997399998
-  },
-  {
-    "sch_id": 1990,
-    "sch_name": "Boston International HS",
-    "sch_type": "Special",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.28141000000005,
-    "longitude": -71.08091000099995
-  },
-  {
-    "sch_id": 1991,
-    "sch_name": "Newcomers Academy",
-    "sch_type": "Special",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.28141000000005,
-    "longitude": -71.08091000099995
-  },
-  {
-    "sch_id": 4671,
-    "sch_name": "Mildred Avenue K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Mattapan",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.276752000000045,
-    "longitude": -71.09042899999997
-  },
-  {
-    "sch_id": 1460,
-    "sch_name": "TechBoston Academy",
-    "sch_type": "6/7-12",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": 6,
-    "grade_high": 12,
-    "latitude": 42.28778349500004,
-    "longitude": -71.07679086299999
-  },
-  {
-    "sch_id": 4290,
-    "sch_name": "Lee Elementary",
-    "sch_type": "K-8",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.29242944500004,
-    "longitude": -71.08037482499998
-  },
-  {
-    "sch_id": 4291,
-    "sch_name": "Lee Academy",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.28660026700004,
-    "longitude": -71.07300803599998
-  },
-  {
-    "sch_id": 4084,
-    "sch_name": "Holmes Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.29677983800008,
-    "longitude": -71.07559966699995
-  },
-  {
-    "sch_id": 4600,
-    "sch_name": "Young Achievers K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Mattapan",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.28230600300003,
-    "longitude": -71.09500173599997
-  },
-  {
-    "sch_id": 4690,
-    "sch_name": "Mattahunt Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Mattapan",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.275806654000064,
-    "longitude": -71.10408884199995
-  },
-  {
-    "sch_id": 4070,
-    "sch_name": "Chittick Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Mattapan",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.26725000000005,
-    "longitude": -71.10477999999995
-  },
-  {
-    "sch_id": 1103,
-    "sch_name": "Comm Acad Sci Health",
-    "sch_type": "HS",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.301120129000026,
-    "longitude": -71.06172883199997
-  },
-  {
-    "sch_id": 4561,
-    "sch_name": "Philbrick Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roslindale",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.28540000000004,
-    "longitude": -71.11773999999997
-  },
-  {
-    "sch_id": 4210,
-    "sch_name": "Haley Elementary",
-    "sch_type": "K-8",
-    "neighborhood": "Roslindale",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.28675000000004,
-    "longitude": -71.10771999899998
-  },
-  {
-    "sch_id": 4661,
-    "sch_name": "BTU K-8 Pilot",
-    "sch_type": "K-8",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.29463000000004,
-    "longitude": -71.11593999999997
-  },
-  {
-    "sch_id": 4192,
-    "sch_name": "Roosevelt Upper (2-7)",
-    "sch_type": "K-8",
-    "neighborhood": "Hyde Park",
-    "grade_low": 2,
-    "grade_high": 7,
-    "latitude": 42.24294211100005,
-    "longitude": -71.12345056099997
-  },
-  {
-    "sch_id": 4201,
-    "sch_name": "Channing Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Hyde Park",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.25162000100005,
-    "longitude": -71.13331999999997
-  },
-  {
-    "sch_id": 4200,
-    "sch_name": "Grew Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Hyde Park",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.25676000000004,
-    "longitude": -71.12731999999994
-  },
-  {
-    "sch_id": 4080,
-    "sch_name": "Conley Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roslindale",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.27479000000005,
-    "longitude": -71.12705000099999
-  },
-  {
-    "sch_id": 2140,
-    "sch_name": "Irving Middle",
-    "sch_type": "MS",
-    "neighborhood": "Roslindale",
-    "grade_low": 6,
-    "grade_high": 8,
-    "latitude": 42.28363000000007,
-    "longitude": -71.12492999899996
-  },
-  {
-    "sch_id": 4560,
-    "sch_name": "Sumner Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roslindale",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.28645000000006,
-    "longitude": -71.12683999899997
-  },
-  {
-    "sch_id": 1340,
-    "sch_name": "Community Academy",
-    "sch_type": "Special",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.30892000000006,
-    "longitude": -71.10348999899998
-  },
-  {
-    "sch_id": 4053,
-    "sch_name": "Hernandez K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.313929220000034,
-    "longitude": -71.09811960599995
-  },
-  {
-    "sch_id": 1080,
-    "sch_name": "English High",
-    "sch_type": "HS",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.30599999900005,
-    "longitude": -71.10959999999994
-  },
-  {
-    "sch_id": 4370,
-    "sch_name": "Mendell Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.31655000100005,
-    "longitude": -71.10160999999994
-  },
-  {
-    "sch_id": 4270,
-    "sch_name": "Kennedy John F Elemen",
-    "sch_type": "ES",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.32177666200005,
-    "longitude": -71.10583877899995
-  },
-  {
-    "sch_id": 4231,
-    "sch_name": "West Zone ELC",
-    "sch_type": "ELC",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -2,
-    "grade_high": 0,
-    "latitude": 42.32628409200004,
-    "longitude": -71.10693516599997
-  },
-  {
-    "sch_id": 4570,
-    "sch_name": "Tobin K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Mission Hill",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.33301000000006,
-    "longitude": -71.09829000099995
-  },
-  {
-    "sch_id": 1010,
-    "sch_name": "Boston Latin School",
-    "sch_type": "6/7-12",
-    "neighborhood": "Fenway/Longwood",
-    "grade_low": 6,
-    "grade_high": 12,
-    "latitude": 42.33789000000007,
-    "longitude": -71.10168999999996
-  },
-  {
-    "sch_id": 1440,
-    "sch_name": "Kennedy Health Careers Academy",
-    "sch_type": "HS",
-    "neighborhood": "Fenway/Longwood",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.341449999000076,
-    "longitude": -71.09152999999998
-  },
-  {
-    "sch_id": 1265,
-    "sch_name": "Fenway High",
-    "sch_type": "HS",
-    "neighborhood": "Mission Hill",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.330579611000076,
-    "longitude": -71.09917741899994
-  },
-  {
-    "sch_id": 1420,
-    "sch_name": "Boston Arts Academy",
-    "sch_type": "HS",
-    "neighborhood": "Fenway/Longwood",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.34676394300004,
-    "longitude": -71.09432067799997
-  },
-  {
-    "sch_id": 1293,
-    "sch_name": "McKinley Prep High Sch",
-    "sch_type": "Special",
-    "neighborhood": "Fenway/Longwood",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.34343000000007,
-    "longitude": -71.09925999999996
-  },
-  {
-    "sch_id": 1292,
-    "sch_name": "McKinley Middle",
-    "sch_type": "Special",
-    "neighborhood": "Fenway/Longwood",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.34794000000005,
-    "longitude": -71.10675999999995
-  },
-  {
-    "sch_id": 4272,
-    "sch_name": "Curley Lower (K1-5)",
-    "sch_type": "K-8",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.318676813000025,
-    "longitude": -71.11421830699999
-  },
-  {
-    "sch_id": 4311,
-    "sch_name": "Manning Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.30558000000008,
-    "longitude": -71.13148999999999
-  },
-  {
-    "sch_id": 4081,
-    "sch_name": "Bates Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roslindale",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.27776000000006,
-    "longitude": -71.13532999999995
-  },
-  {
-    "sch_id": 4082,
-    "sch_name": "Mozart Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roslindale",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.281220000000076,
-    "longitude": -71.14104999999995
-  },
-  {
-    "sch_id": 4033,
-    "sch_name": "Kilmer Upper (4-8)",
-    "sch_type": "K-8",
-    "neighborhood": "West Roxbury",
-    "grade_low": 4,
-    "grade_high": 8,
-    "latitude": 42.29265200000003,
-    "longitude": -71.15236699999997
-  },
-  {
-    "sch_id": 4030,
-    "sch_name": "Beethoven Elementary",
-    "sch_type": "ES",
-    "neighborhood": "West Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.26342999900004,
-    "longitude": -71.15612999999996
-  },
-  {
-    "sch_id": 4031,
-    "sch_name": "Kilmer Lower (K1-3)",
-    "sch_type": "K-8",
-    "neighborhood": "West Roxbury",
-    "grade_low": -1,
-    "grade_high": 3,
-    "latitude": 42.27187716700007,
-    "longitude": -71.16256950599995
-  },
-  {
-    "sch_id": 1253,
-    "sch_name": "Urban Science Academy",
-    "sch_type": "HS",
-    "neighborhood": "West Roxbury",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.282259999000075,
-    "longitude": -71.17433999999997
-  },
-  {
-    "sch_id": 4331,
-    "sch_name": "Lyndon K-8",
-    "sch_type": "K-8",
-    "neighborhood": "West Roxbury",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.28299000000004,
-    "longitude": -71.15836999999993
-  },
-  {
-    "sch_id": 4178,
-    "sch_name": "Edison K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Brighton",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.34558000000004,
-    "longitude": -71.16018999999994
-  },
-  {
-    "sch_id": 4171,
-    "sch_name": "Lyon K-8",
-    "sch_type": "K-12",
-    "neighborhood": "Brighton",
-    "grade_low": -1,
-    "grade_high": 12,
-    "latitude": 42.35107000000005,
-    "longitude": -71.16149999999993
-  },
-  {
-    "sch_id": 1171,
-    "sch_name": "Lyon, Mary 9-12",
-    "sch_type": "K-12",
-    "neighborhood": "Brighton",
-    "grade_low": -1,
-    "grade_high": 12,
-    "latitude": 42.35211999900008,
-    "longitude": -71.16075999999998
-  },
-  {
-    "sch_id": 4173,
-    "sch_name": "Winship Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Brighton",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.347593036000035,
-    "longitude": -71.15534797799995
-  },
-  {
-    "sch_id": 1230,
-    "sch_name": "Another Course to College",
-    "sch_type": "HS",
-    "neighborhood": "Brighton",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.35056411000005,
-    "longitude": -71.14528604499998
-  },
-  {
-    "sch_id": 1040,
-    "sch_name": "Brighton High",
-    "sch_type": "HS",
-    "neighborhood": "Brighton",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.34908000000007,
-    "longitude": -71.14548999899995
-  },
-  {
-    "sch_id": 4621,
-    "sch_name": "Baldwin ELPA",
-    "sch_type": "ELC",
-    "neighborhood": "Brighton",
-    "grade_low": -2,
-    "grade_high": 0,
-    "latitude": 42.34203000100007,
-    "longitude": -71.14051000099994
-  },
-  {
-    "sch_id": 4610,
-    "sch_name": "Horace Mann",
-    "sch_type": "Special",
-    "neighborhood": "Allston",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.35205000000008,
-    "longitude": -71.13769999999994
-  },
-  {
-    "sch_id": 4620,
-    "sch_name": "Jackson/Mann K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Allston",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.35205000000008,
-    "longitude": -71.13769999999994
-  },
-  {
-    "sch_id": 1285,
-    "sch_name": "New Mission High",
-    "sch_type": "HS",
-    "neighborhood": "Hyde Park",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.26320841100005,
-    "longitude": -71.11772322699994
-  },
-  {
-    "sch_id": 4160,
-    "sch_name": "Gardner Elementary",
-    "sch_type": "K-8",
-    "neighborhood": "Allston",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.36076000000003,
-    "longitude": -71.13411000099995
-  },
-  {
-    "sch_id": 4410,
-    "sch_name": "Ohrenberger Elementary",
-    "sch_type": "K-8",
-    "neighborhood": "West Roxbury",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.260750001000076,
-    "longitude": -71.14960999899995
-  },
-  {
-    "sch_id": 4140,
-    "sch_name": "Everett Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.31367894700003,
-    "longitude": -71.05976917199996
-  },
-  {
-    "sch_id": 4670,
-    "sch_name": "P.A. Shaw",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.282112287000075,
-    "longitude": -71.08683972999995
-  },
-  {
-    "sch_id": 4130,
-    "sch_name": "Greenwood Sarah K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.29655145300006,
-    "longitude": -71.08066142299998
-  },
-  {
-    "sch_id": 1120,
-    "sch_name": "Burke High",
-    "sch_type": "HS",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.30681009800003,
-    "longitude": -71.08162464099996
-  },
-  {
-    "sch_id": 4100,
-    "sch_name": "Dever Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.31762000000003,
-    "longitude": -71.04273999999998
-  },
-  {
-    "sch_id": 2190,
-    "sch_name": "McCormack Middle",
-    "sch_type": "MS",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": 6,
-    "grade_high": 8,
-    "latitude": 42.31802000000005,
-    "longitude": -71.04349999899995
-  },
-  {
-    "sch_id": 4630,
-    "sch_name": "Condon Elementary",
-    "sch_type": "K-8",
-    "neighborhood": "South Boston",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.338017224000055,
-    "longitude": -71.05215063499998
-  },
-  {
-    "sch_id": 4193,
-    "sch_name": "Roosevelt K-8 (K1-1)",
-    "sch_type": "K-8",
-    "neighborhood": "Hyde Park",
-    "grade_low": -1,
-    "grade_high": 1,
-    "latitude": 42.23389000000003,
-    "longitude": -71.13287999999994
-  },
-  {
-    "sch_id": 4062,
-    "sch_name": "Bradley Elementary",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.39160749800004,
-    "longitude": -71.00504450099999
-  },
-  {
-    "sch_id": 4230,
-    "sch_name": "Hennigan K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.32561345800008,
-    "longitude": -71.10691008599997
-  },
-  {
-    "sch_id": 4440,
-    "sch_name": "Ellison/ Parks ELC",
-    "sch_type": "ELC",
-    "neighborhood": "Mattapan",
-    "grade_low": -2,
-    "grade_high": 0,
-    "latitude": 42.271779999000046,
-    "longitude": -71.09189000099997
-  },
-  {
-    "sch_id": 1430,
-    "sch_name": "Greater Egleston High",
-    "sch_type": "HS",
-    "neighborhood": "Roxbury",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.31412000000006,
-    "longitude": -71.09929000099999
-  },
-  {
-    "sch_id": 1459,
-    "sch_name": "TechBoston Acad Lower (6-9)",
-    "sch_type": "6/7-12",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": 6,
-    "grade_high": 9,
-    "latitude": 42.28778349500004,
-    "longitude": -71.07679086299999
-  },
-  {
-    "sch_id": 4285,
-    "sch_name": "Mission Hill K-8",
-    "sch_type": "K-8",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": -1,
-    "grade_high": 8,
-    "latitude": 42.307026492000034,
-    "longitude": -71.11386683599994
-  },
-  {
-    "sch_id": 1053,
-    "sch_name": "Margarita Muniz Academy",
-    "sch_type": "HS",
-    "neighborhood": "Jamaica Plain",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.30719963100006,
-    "longitude": -71.11448157899997
-  },
-  {
-    "sch_id": 4123,
-    "sch_name": "Dudley Street Neighborhood Charter School",
-    "sch_type": "ES",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.32191880700003,
-    "longitude": -71.07337306899996
-  },
-  {
-    "sch_id": 1195,
-    "sch_name": "Community Leadership Academy",
-    "sch_type": "HS",
-    "neighborhood": "Hyde Park",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.26321924400003,
-    "longitude": -71.11788546099996
-  },
-  {
-    "sch_id": 4241,
-    "sch_name": "Higginson Elementary",
-    "sch_type": "ES",
-    "neighborhood": "Roxbury",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.31765152500003,
-    "longitude": -71.09202897099993
-  },
-  {
-    "sch_id": 4321,
-    "sch_name": "Alighieri Montessori",
-    "sch_type": "ES",
-    "neighborhood": "East Boston",
-    "grade_low": -1,
-    "grade_high": 5,
-    "latitude": 42.371559760000025,
-    "longitude": -71.03793949699997
-  },
-  {
-    "sch_id": 1215,
-    "sch_name": "Boston Adult Tech Acad",
-    "sch_type": "Special",
-    "neighborhood": "Back Bay/South End",
-    "grade_low": null,
-    "grade_high": null,
-    "latitude": 42.34876103900007,
-    "longitude": -71.06814894299998
-  },
-  {
-    "sch_id": 1064,
-    "sch_name": "Dorchester Academy",
-    "sch_type": "HS",
-    "neighborhood": "Dorchester (South)",
-    "grade_low": 9,
-    "grade_high": 12,
-    "latitude": 42.30081266900004,
-    "longitude": -71.06182057399997
-  },
-  {
-    "sch_id": 1470,
-    "sch_name": "Boston Green Academy",
-    "sch_type": "6/7-12",
-    "neighborhood": "Brighton",
-    "grade_low": 6,
-    "grade_high": 12,
-    "latitude": 42.350432056000045,
-    "longitude": -71.14596043999995
-  },
-  {
-    "sch_id": 1260,
-    "sch_name": "Dearborn Middle School",
-    "sch_type": "6/7-12",
-    "neighborhood": "Dorchester (North)",
-    "grade_low": 6,
-    "grade_high": 12,
-    "latitude": 42.30738650500007,
-    "longitude": -71.08080711099996
+    "id": "4361",
+    "school": "Adams Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3656756,
+    "longitude": -71.0350997
+  },
+  {
+    "id": "1120",
+    "school": "Albert Holland School of Technology",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.30714,
+    "longitude": -71.08087
+  },
+  {
+    "id": "4621",
+    "school": "Baldwin Early Learning Pilot Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 1,
+    "latitude": 42.3420923,
+    "longitude": -71.1404448
+  },
+  {
+    "id": "4081",
+    "school": "Bates Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2777651,
+    "longitude": -71.1354287
+  },
+  {
+    "id": "4030",
+    "school": "Beethoven Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 2,
+    "latitude": 42.2634939,
+    "longitude": -71.1560437
+  },
+  {
+    "id": "4640",
+    "school": "Blackstone Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3408287,
+    "longitude": -71.0720846
+  },
+  {
+    "id": "1215",
+    "school": "Boston Adult Technical Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 11,
+    "grade_max": 12,
+    "latitude": 42.34866,
+    "longitude": -71.06815
+  },
+  {
+    "id": "1216",
+    "school": "Boston Adult Technical Academy - East Boston",
+    "provider_type": "Boston Public School",
+    "grade_min": 11,
+    "grade_max": 12,
+    "latitude": 42.384574,
+    "longitude": -70.999272
+  },
+  {
+    "id": "1420",
+    "school": "Boston Arts Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.34628,
+    "longitude": -71.09507
+  },
+  {
+    "id": "1311",
+    "school": "Boston Collaborative High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 6,
+    "grade_max": 12,
+    "latitude": 42.33358,
+    "longitude": -71.05043
+  },
+  {
+    "id": "1410",
+    "school": "Boston Day and Evening Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.327021,
+    "longitude": -71.0817931
+  },
+  {
+    "id": "1470",
+    "school": "Boston Green Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.350353,
+    "longitude": -71.1454417
+  },
+  {
+    "id": "1990",
+    "school": "Boston International High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.2812096,
+    "longitude": -71.0808842
+  },
+  {
+    "id": "1020",
+    "school": "Boston Latin Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.31621322,
+    "longitude": -71.08451688
+  },
+  {
+    "id": "1010",
+    "school": "Boston Latin School",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.33805564,
+    "longitude": -71.1011217
+  },
+  {
+    "id": "4661",
+    "school": "Boston Teachers Union Elementary Pilot School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.2945371,
+    "longitude": -71.1160291
+  },
+  {
+    "id": "4062",
+    "school": "Bradley Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3917447,
+    "longitude": -71.0050171
+  },
+  {
+    "id": "1040",
+    "school": "Brighton High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.34932165,
+    "longitude": -71.1454397
+  },
+  {
+    "id": "4261",
+    "school": "Carter School",
+    "provider_type": "Boston Public School",
+    "grade_min": 5,
+    "grade_max": 12,
+    "latitude": 42.30918708,
+    "longitude": -71.0755715
+  },
+  {
+    "id": "4201",
+    "school": "Channing Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2516253,
+    "longitude": -71.1333527
+  },
+  {
+    "id": "1050",
+    "school": "Charlestown High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.38052525,
+    "longitude": -71.06096402
+  },
+  {
+    "id": "4070",
+    "school": "Chittick Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2671634,
+    "longitude": -71.1046056
+  },
+  {
+    "id": "1340",
+    "school": "Community Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.30918297,
+    "longitude": -71.10348905
+  },
+  {
+    "id": "4630",
+    "school": "Condon K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.3383742,
+    "longitude": -71.0526553
+  },
+  {
+    "id": "4080",
+    "school": "Conley Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.2747815,
+    "longitude": -71.1270743
+  },
+  {
+    "id": "4272",
+    "school": "Curley K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.3189244,
+    "longitude": -71.1140058
+  },
+  {
+    "id": "4321",
+    "school": "Dante Alighieri Montessori School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.371407,
+    "longitude": -71.0378853
+  },
+  {
+    "id": "1260",
+    "school": "Dearborn STEM Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.32644966,
+    "longitude": -71.08084219
+  },
+  {
+    "id": "4123",
+    "school": "Dudley Street Neighborhood Charter School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 5,
+    "latitude": 42.3235158,
+    "longitude": -71.0728512
+  },
+  {
+    "id": "4450",
+    "school": "East Boston Early Education Center",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 1,
+    "latitude": 42.3693328,
+    "longitude": -71.0342229
+  },
+  {
+    "id": "1070",
+    "school": "East Boston High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.38104617,
+    "longitude": -71.03502083
+  },
+  {
+    "id": "4178",
+    "school": "Edison Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3454492,
+    "longitude": -71.1602205
+  },
+  {
+    "id": "4381",
+    "school": "Eliot K-8 Innovation School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 8,
+    "latitude": 42.366089,
+    "longitude": -71.0534446
+  },
+  {
+    "id": "4240",
+    "school": "Ellis Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3161064,
+    "longitude": -71.0929996
+  },
+  {
+    "id": "4440",
+    "school": "Ellison-Parks Early Education School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 3,
+    "latitude": 42.2717608,
+    "longitude": -71.0916515
+  },
+  {
+    "id": "1080",
+    "school": "English High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.3065462,
+    "longitude": -71.10934878
+  },
+  {
+    "id": "4140",
+    "school": "Everett Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3137024,
+    "longitude": -71.0597588
+  },
+  {
+    "id": "1265",
+    "school": "Fenway High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.33077228,
+    "longitude": -71.0992789
+  },
+  {
+    "id": "4380",
+    "school": "Frederick Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.309067,
+    "longitude": -71.075409
+  },
+  {
+    "id": "4160",
+    "school": "Gardner Pilot Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3606624,
+    "longitude": -71.1339437
+  },
+  {
+    "id": "1430",
+    "school": "Greater Egleston High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.31422195,
+    "longitude": -71.09935529
+  },
+  {
+    "id": "4200",
+    "school": "Grew Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.2568706,
+    "longitude": -71.1271685
+  },
+  {
+    "id": "4061",
+    "school": "Guild Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3883828,
+    "longitude": -71.0042277
+  },
+  {
+    "id": "4113",
+    "school": "Hale Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3255649,
+    "longitude": -71.0909569
+  },
+  {
+    "id": "4210",
+    "school": "Haley Pilot School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2865896,
+    "longitude": -71.1075298
+  },
+  {
+    "id": "4280",
+    "school": "Harvard-Kent Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3764682,
+    "longitude": -71.057716
+  },
+  {
+    "id": "4460",
+    "school": "Haynes Early Education Center",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 1,
+    "latitude": 42.3150365,
+    "longitude": -71.0788865
+  },
+  {
+    "id": "4391",
+    "school": "Henderson K-12 Inclusion School (Lower)",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 1,
+    "latitude": 42.2939657,
+    "longitude": -71.0623096
+  },
+  {
+    "id": "1140",
+    "school": "Henderson K-12 Inclusion School (Upper)",
+    "provider_type": "Boston Public School",
+    "grade_min": 2,
+    "grade_max": 8,
+    "latitude": 42.28151444,
+    "longitude": -71.06960726
+  },
+  {
+    "id": "4230",
+    "school": "Hennigan Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3255353,
+    "longitude": -71.1066364
+  },
+  {
+    "id": "405302",
+    "school": "Hernandez Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3139303,
+    "longitude": -71.0981073
+  },
+  {
+    "id": "4241",
+    "school": "Higginson Inclusion K-2 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 2,
+    "latitude": 42.3176412,
+    "longitude": -71.0919783
+  },
+  {
+    "id": "4242",
+    "school": "Higginson-Lewis 3-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": 3,
+    "grade_max": 8,
+    "latitude": 42.32111723,
+    "longitude": -71.08637488
+  },
+  {
+    "id": "4084",
+    "school": "Holmes Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.2966924,
+    "longitude": -71.0756832
+  },
+  {
+    "id": "4610",
+    "school": "Horace Mann School for the Deaf & Hard of Hearing",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 12,
+    "latitude": 42.3791722,
+    "longitude": -71.0674639
+  },
+  {
+    "id": "426002",
+    "school": "Hurley K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.3387493,
+    "longitude": -71.0776795
+  },
+  {
+    "id": "4270",
+    "school": "John F Kennedy Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3218226,
+    "longitude": -71.1053946
+  },
+  {
+    "id": "1441",
+    "school": "Kennedy Academy for Health Careers (9-11)",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 11,
+    "latitude": 42.348417,
+    "longitude": -71.069051
+  },
+  {
+    "id": "1440",
+    "school": "Kennedy Academy for Health Careers (Gr 12)",
+    "provider_type": "Boston Public School",
+    "grade_min": 12,
+    "grade_max": 12,
+    "latitude": 42.33410848,
+    "longitude": -71.10643993
+  },
+  {
+    "id": "4390",
+    "school": "Kenny Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2865084,
+    "longitude": -71.0532604
+  },
+  {
+    "id": "4033",
+    "school": "Kilmer K-8 School (4-8)",
+    "provider_type": "Boston Public School",
+    "grade_min": 4,
+    "grade_max": 8,
+    "latitude": 42.29267794,
+    "longitude": -71.15228448
+  },
+  {
+    "id": "4031",
+    "school": "Kilmer K-8 School (K-3)",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 3,
+    "latitude": 42.2718487,
+    "longitude": -71.1625526
+  },
+  {
+    "id": "4055",
+    "school": "King Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3112933,
+    "longitude": -71.0766156
+  },
+  {
+    "id": "4290",
+    "school": "Lee K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.2921013,
+    "longitude": -71.08014
+  },
+  {
+    "id": "4331",
+    "school": "Lyndon K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.2829866,
+    "longitude": -71.1585002
+  },
+  {
+    "id": "4171",
+    "school": "Lyon Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3510924,
+    "longitude": -71.1615152
+  },
+  {
+    "id": "1210",
+    "school": "Madison Park Technical Vocational High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.33187454,
+    "longitude": -71.09071503
+  },
+  {
+    "id": "4311",
+    "school": "Manning Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3055765,
+    "longitude": -71.1315295
+  },
+  {
+    "id": "105302",
+    "school": "Margarita Muniz Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.30730829,
+    "longitude": -71.11435042
+  },
+  {
+    "id": "432302",
+    "school": "Mario Umana Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.3784026,
+    "longitude": -71.0408157
+  },
+  {
+    "id": "4121",
+    "school": "Mason Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 5,
+    "latitude": 42.3260691,
+    "longitude": -71.0712727
+  },
+  {
+    "id": "4350",
+    "school": "Mather Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3080855,
+    "longitude": -71.0610011
+  },
+  {
+    "id": "4691",
+    "school": "Mattahunt Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2758331,
+    "longitude": -71.1030349
+  },
+  {
+    "id": "4360",
+    "school": "McKay K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 8,
+    "latitude": 42.3693328,
+    "longitude": -71.0342229
+  },
+  {
+    "id": "1291",
+    "school": "Melvin H. King - Elementary",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.3443482,
+    "longitude": -71.0735011
+  },
+  {
+    "id": "1293",
+    "school": "Melvin H. King - Prep",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.3436137,
+    "longitude": -71.09914896
+  },
+  {
+    "id": "1294",
+    "school": "Melvin H. King - South End Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.34451652,
+    "longitude": -71.07324005
+  },
+  {
+    "id": "4370",
+    "school": "Mendell Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3165381,
+    "longitude": -71.1016343
+  },
+  {
+    "id": "4671",
+    "school": "Mildred Avenue K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.2761249,
+    "longitude": -71.0914125
+  },
+  {
+    "id": "4082",
+    "school": "Mozart Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.2812451,
+    "longitude": -71.1410036
+  },
+  {
+    "id": "4400",
+    "school": "Murphy K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 8,
+    "latitude": 42.2945285,
+    "longitude": -71.0494046
+  },
+  {
+    "id": "1285",
+    "school": "New Mission High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.26279443,
+    "longitude": -71.11789922
+  },
+  {
+    "id": "1991",
+    "school": "Newcomers Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.28142641,
+    "longitude": -71.08098392
+  },
+  {
+    "id": "1030",
+    "school": "O'Bryant School of Math and Science",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.33128321,
+    "longitude": -71.08831253
+  },
+  {
+    "id": "4543",
+    "school": "O'Donnell Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3779852,
+    "longitude": -71.0379452
+  },
+  {
+    "id": "4410",
+    "school": "Ohrenberger School (3-8)",
+    "provider_type": "Boston Public School",
+    "grade_min": 3,
+    "grade_max": 8,
+    "latitude": 42.2608422,
+    "longitude": -71.1494718
+  },
+  {
+    "id": "4680",
+    "school": "Orchard Gardens K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.3305151,
+    "longitude": -71.077655
+  },
+  {
+    "id": "4322",
+    "school": "Otis Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3752217,
+    "longitude": -71.0339443
+  },
+  {
+    "id": "4541",
+    "school": "Patrick J Kennedy Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3784775,
+    "longitude": -71.0304158
+  },
+  {
+    "id": "4022",
+    "school": "Perkins Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.331297,
+    "longitude": -71.050565
+  },
+  {
+    "id": "4592",
+    "school": "Perry Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3321548,
+    "longitude": -71.0301834
+  },
+  {
+    "id": "4650",
+    "school": "Quincy Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 5,
+    "latitude": 42.348055,
+    "longitude": -71.0644981
+  },
+  {
+    "id": "1450",
+    "school": "Quincy Upper School",
+    "provider_type": "Boston Public School",
+    "grade_min": 6,
+    "grade_max": 12,
+    "latitude": 42.34761755,
+    "longitude": -71.06385081
+  },
+  {
+    "id": "4192",
+    "school": "Roosevelt K-8 School (2-8)",
+    "provider_type": "Boston Public School",
+    "grade_min": 2,
+    "grade_max": 8,
+    "latitude": 42.24345669,
+    "longitude": -71.12439535
+  },
+  {
+    "id": "4193",
+    "school": "Roosevelt K-8 School (K-1)",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 1,
+    "latitude": 42.2338462,
+    "longitude": -71.1328756
+  },
+  {
+    "id": "4530",
+    "school": "Russell Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3203861,
+    "longitude": -71.0595267
+  },
+  {
+    "id": "1194",
+    "school": "Ruth Batson Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.31750345,
+    "longitude": -71.04448414
+  },
+  {
+    "id": "413002",
+    "school": "Sarah Greenwood K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.296945,
+    "longitude": -71.0802195
+  },
+  {
+    "id": "4563",
+    "school": "Sarah Roberts Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.28331,
+    "longitude": -71.12529
+  },
+  {
+    "id": "4151",
+    "school": "Shaw-Taylor Elementary School (2-6)",
+    "provider_type": "Boston Public School",
+    "grade_min": 2,
+    "grade_max": 6,
+    "latitude": 42.2779182,
+    "longitude": -71.0774009
+  },
+  {
+    "id": "4670",
+    "school": "Shaw-Taylor Elementary School (K-1)",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 1,
+    "latitude": 42.2821201,
+    "longitude": -71.0867788
+  },
+  {
+    "id": "1200",
+    "school": "Snowden International High School",
+    "provider_type": "Boston Public School",
+    "grade_min": 9,
+    "grade_max": 12,
+    "latitude": 42.35054054,
+    "longitude": -71.07796218
+  },
+  {
+    "id": "1460",
+    "school": "TechBoston Academy",
+    "provider_type": "Boston Public School",
+    "grade_min": 7,
+    "grade_max": 12,
+    "latitude": 42.28469865,
+    "longitude": -71.07614512
+  },
+  {
+    "id": "4570",
+    "school": "Tobin K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 8,
+    "latitude": 42.3329518,
+    "longitude": -71.0983383
+  },
+  {
+    "id": "4580",
+    "school": "Trotter Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3156095,
+    "longitude": -71.0881251
+  },
+  {
+    "id": "4590",
+    "school": "Tynan Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.334869,
+    "longitude": -71.0391025
+  },
+  {
+    "id": "4345",
+    "school": "UP Academy Dorchester",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.2997642,
+    "longitude": -71.071041
+  },
+  {
+    "id": "4250",
+    "school": "UP Academy Holland",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.306095,
+    "longitude": -71.0737333
+  },
+  {
+    "id": "4283",
+    "school": "Warren-Prescott K-8 School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 8,
+    "latitude": 42.3779245,
+    "longitude": -71.0644929
+  },
+  {
+    "id": "4173",
+    "school": "Winship Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -1,
+    "grade_max": 6,
+    "latitude": 42.3476163,
+    "longitude": -71.1554838
+  },
+  {
+    "id": "4600",
+    "school": "Young Achievers Elementary School",
+    "provider_type": "Boston Public School",
+    "grade_min": -2,
+    "grade_max": 6,
+    "latitude": 42.2818705,
+    "longitude": -71.094253
   }
 ]
