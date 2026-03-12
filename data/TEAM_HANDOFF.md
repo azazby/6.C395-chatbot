@@ -1,69 +1,82 @@
-# Team Handoff: Data Layer is Done — Here's How to Use It
+# Team Handoff: Data Layer — How to Use It
 
 ## What's Built
 
 Two data stores that work together for the chatbot:
 
-1. **SQLite database** (`bps_schools.db`) — 131 BPS schools with structured fields: name, address, lat/lon, grade range, school type, neighborhood. This powers **hard filtering** (e.g., "what schools can my 3rd grader attend within 1 mile of my house?").
+1. **SQLite database** (`bps_schools.db`) — 1,019 schools after dedup (111 BPS + 908 non-BPS) with structured fields for hard filtering (grade, age, location, provider type, boolean program flags).
 
-2. **FAISS vector store** (`vector_store/school_index.faiss`) — Every school has a text description embedded as a 384-dim vector. This powers **soft filtering / RAG** (e.g., "I want a school with strong arts programs" or "bilingual Spanish immersion").
+2. **FAISS vector store** (`vector_store/school_index.faiss`) — 111 BPS schools with text descriptions embedded as 384-dim vectors for soft filtering / RAG (e.g., "I want a school with strong arts programs").
+
+Source data: `raw_data/choice_tool_raw.json`.
 
 The two layers combine: hard filter narrows to eligible schools, then semantic search ranks them by the user's preferences.
 
 ## How to Use in the Chatbot
 
-Everything goes through one class. Import it:
+Everything goes through one class:
 
 ```python
-from build_database import BPSDatabase
+from database import BPSDatabase
 
 db = BPSDatabase()
 ```
 
-### Three main methods:
+### Key methods:
 
-**1. Hard filter only** — when the user gives concrete constraints:
+**1. Hard filter** — concrete constraints:
 ```python
-# "What schools serve 3rd grade in Dorchester?"
-results = db.hard_filter(grade=3, neighborhood="Dorchester")
+# BPS schools serving 3rd grade
+results = db.hard_filter(grade=3)
 
-# "Schools within 1 mile of my home"
+# Schools within 1 mile of a location
 results = db.hard_filter(grade=1, lat=42.35, lon=-71.06, radius_miles=1.0)
+
+# Non-BPS schools for a 3-year-old (36 months)
+results = db.find_schools_by_age(36)
+
+# Boolean filters (UPK, ADA, accepts_ccfa, headstart, etc.)
+results = db.find_schools_by_filters(accepts_ccfa=1, headstart=1)
 ```
 
-**2. Semantic search only** — when the user asks something fuzzy:
+**2. Semantic search** — fuzzy queries (BPS only):
 ```python
-# "What schools have bilingual Spanish programs?"
 results = db.semantic_search("bilingual Spanish dual language", top_k=5)
 ```
 
-**3. Combined search** — hard filter first, then rank by semantic match (this is the main one to use):
+**3. Combined search** — hard filter first, then rank by semantic match:
 ```python
-# "My kid is entering 6th grade near Jamaica Plain and loves art"
 results = db.search(
     query="arts programs visual arts music",
     grade=6,
-    neighborhood="Jamaica Plain",
+    provider_type="Boston Public School",
     top_k=5
 )
 ```
 
-Each result is a dict with: `sch_id`, `sch_name`, `score`, `description`, `distance_miles` (if location was provided), and `metadata`.
-
-### Getting full school details:
+### Other useful methods:
 ```python
-school = db.get_school_detail(1010)  # Returns full row for Boston Latin School
+db.get_school_detail("school-id")   # Full record + RAG description
+db.get_all_provider_types()          # List of distinct provider types
+db.find_schools_near(42.35, -71.08)  # Proximity search
 ```
 
-### Helper methods:
-```python
-db.get_all_neighborhoods()   # List of all neighborhoods
-db.get_all_school_types()    # List of (type_code, type_description) tuples
-```
+## Schema
+
+Primary key is `id` (TEXT). Key columns:
+
+| Column | Type | Notes |
+|--------|------|-------|
+| `id` | TEXT | Primary key |
+| `school` | TEXT | School name |
+| `provider_type` | TEXT | "Boston Public School", "Family Child Care", etc. |
+| `grade_min` / `grade_max` | INTEGER | BPS only. K0=-2, K1=-1, K2=0, 1-12 |
+| `grade_min_sped` | INTEGER | BPS special education lower bound |
+| `age_min_months` / `age_max_months` | INTEGER | Non-BPS only. Age range in months |
+| `latitude` / `longitude` | REAL | For proximity search |
+| Boolean flags | INTEGER | `UPK`, `ADA`, `accepts_ccfa`, `headstart`, `has_language_program`, `has_advanced_placement`, `has_international_baccalaureate`, `uniform`, `special_admission`, `surround_care`, `build_care`, `tuition` |
 
 ## Grade Encoding
-
-When the user says a grade, convert it to an integer:
 
 | User says | Pass as |
 |-----------|---------|
@@ -74,101 +87,44 @@ When the user says a grade, convert it to an integer:
 | ... | ... |
 | 12th grade | `12` |
 
-## What the Chatbot Needs to Do
-
-The LLM (via the Anthropic API or whatever model you're using) should:
-
-1. **Parse the user's message** to extract:
-   - Grade level (hard filter)
-   - Location / neighborhood / address (hard filter — you'll need geocoding for addresses)
-   - School type preference (hard filter)
-   - Soft preferences like "arts", "STEM", "bilingual", "small school" (soft filter)
-
-2. **Call `db.search()`** with the extracted parameters
-
-3. **Format the results** into a natural language response with school names, addresses, why they match, etc.
-
-4. **Use the `description` field** from results as RAG context — feed it into the LLM prompt so it can give specific, accurate answers about each school.
-
-## Example Chatbot Flow
-
-```
-User: "I'm looking for a school for my daughter entering kindergarten. 
-       We live in East Boston and she speaks Spanish at home."
-
-Bot extracts:
-  - grade = -1  (K1)
-  - neighborhood = "East Boston"
-  - query = "Spanish bilingual language"
-
-Bot calls:
-  db.search(query="Spanish bilingual language", grade=-1, 
-            neighborhood="East Boston", top_k=5)
-
-Bot gets back schools like:
-  - Alighieri Montessori (bilingual programs)
-  - East Boston EEC
-  - Guild Elementary
-  - etc.
-
-Bot responds with a friendly summary of the options.
-```
+Non-BPS schools use age in months instead of grades.
 
 ## File Structure
 
 ```
-chatbot/
-├── build_database.py          # BPSDatabase class — import this
-├── enrich_schools.py          # (Optional) scraper to add more school data
-├── bps_schools.db             # SQLite database (don't edit directly)
+data/
+├── database.py               # BPSDatabase class — import this
+├── build_database.py         # Build pipeline (run once to rebuild)
+├── bps_schools.db            # SQLite database (don't edit directly)
 ├── raw_data/
-│   ├── public_schools.csv     # Source data (131 schools)
-│   └── school_descriptions.json  # Enriched descriptions (programs, languages, etc.)
+│   └── choice_tool_raw.json  # Source data (1,027 records, 1,019 after dedup)
 ├── vector_store/
-│   ├── school_index.faiss     # FAISS vector index
-│   ├── documents.json         # Text descriptions
-│   └── metadata.json          # Structured metadata
-└── app.py                     # ← YOUR GRADIO CHATBOT GOES HERE
+│   ├── school_index.faiss    # FAISS vector index (BPS only, 111 schools)
+│   ├── documents.json        # Text descriptions
+│   └── metadata.json         # Structured metadata
+└── TEAM_HANDOFF.md           # This file
 ```
 
-## Setup for New Team Members
+## Setup
 
 ```bash
-cd chatbot
-uv venv bps_env
-source bps_env/bin/activate
-uv pip install faiss-cpu sentence-transformers pandas numpy gradio
+pip install faiss-cpu sentence-transformers numpy
 ```
 
-The database and vector store are already built (committed to the repo), so teammates don't need to run `build_database.py` unless they change the source data.
+The database and vector store are already built (committed to the repo). Only run `build_database.py` if you change the source data.
 
-## For HuggingFace Spaces Deployment
+## Rebuilding
 
-Your `requirements.txt` should include:
-```
-faiss-cpu
-sentence-transformers
-pandas
-numpy
-gradio
+```bash
+cd data
+python build_database.py                # Build both DB and vector store
+python build_database.py --db-only      # SQLite only
+python build_database.py --vector-only  # Vector store only
 ```
 
-Bundle `bps_schools.db`, `vector_store/`, `raw_data/`, and `build_database.py` in the Space repo alongside your `app.py`.
+## What's NOT in the Data
 
-## Geocoding (Nice to Have)
-
-If you want to let users type an address instead of a neighborhood, you'll need geocoding to get lat/lon. Options:
-- **geopy** (`pip install geopy`) — uses free Nominatim/OpenStreetMap
-- **Google Maps Geocoding API** — more accurate but needs API key
-- Or just ask users for their neighborhood/zip code to keep it simple
-
-## What's NOT in the Data Yet
-
-- Exact walk zone boundaries (we approximate with 1-mile radius)
-- Transportation eligibility rules (complex, depends on grade + distance)
+- Walk zone boundaries (approximated with radius search)
+- Transportation eligibility rules
 - School capacity / available seats
 - MCAS scores / accountability ratings
-- Detailed school hours
-- Before/after school program details (we have some, not all)
-
-These could be added to `school_descriptions.json` and the vector store rebuilt.
