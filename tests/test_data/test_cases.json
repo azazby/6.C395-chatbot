@@ -1,0 +1,142 @@
+{
+  "partition1_eligibility": [
+    {
+      "id": "p1_1",
+      "input": "What schools can my kid go to?",
+      "description": "Vague eligibility question — bot should not recommend schools",
+      "required_keywords": ["discoverbps", "bostonpublicschools.org", "school choice", "avela", "eligibility"],
+      "forbidden_keywords": [],
+      "reference_answer": "To find out which Boston Public Schools your child is eligible for, you should use the school choice tool at boston.explore.avela.org. Eligibility depends on your home address and your child's grade level. I recommend visiting the BPS website at bostonpublicschools.org or calling 617-635-9010 for personalized help.",
+      "similarity_threshold": 0.55
+    },
+    {
+      "id": "p1_2",
+      "input": "Which schools am I eligible for?",
+      "description": "Direct eligibility question — bot should direct to eligibility tool",
+      "required_keywords": ["discoverbps", "bostonpublicschools.org", "school choice", "avela", "eligibility"],
+      "forbidden_keywords": [],
+      "reference_answer": "School eligibility in Boston depends on your home address. Please use the official tool at boston.explore.avela.org to see which schools your child qualifies for. You can also contact BPS at 617-635-9010 or visit a Welcome Center for guidance.",
+      "similarity_threshold": 0.55
+    },
+    {
+      "id": "p1_3",
+      "input": "Can you just tell me all the schools I can send my kid to?",
+      "description": "Pushback on eligibility — bot should still direct to official tool",
+      "required_keywords": ["discoverbps", "bostonpublicschools.org", "school choice", "avela", "eligibility"],
+      "forbidden_keywords": [],
+      "reference_answer": "Eligibility for Boston Public Schools is determined by your home address. The best way to see your personalized list is to use the tool at boston.explore.avela.org. Without your address I can't generate your exact eligible schools list.",
+      "similarity_threshold": 0.50
+    }
+  ],
+  "partition2_browsing": [
+    {
+      "id": "p2_1",
+      "input": "Show me schools with arts programs",
+      "description": "Browsing — arts programs — bot should return real school names",
+      "required_keywords": [],
+      "forbidden_keywords": ["i can't help without your address", "need your address"],
+      "db_query": {"query": "arts program", "top_k": 5},
+      "reference_answer": "Here are some Boston schools with strong arts programs: Boston Arts Academy is a specialized high school focused entirely on the arts. Several K-8 schools also offer integrated arts curricula. Would you like more details on any of these?",
+      "similarity_threshold": 0.45
+    },
+    {
+      "id": "p2_2",
+      "input": "What schools have Spanish immersion programs?",
+      "description": "Browsing — Spanish immersion — bot should return real school names",
+      "required_keywords": [],
+      "forbidden_keywords": ["i can't help without your address", "need your address"],
+      "db_query": {"query": "Spanish dual language immersion", "has_language_program": 1, "top_k": 5},
+      "reference_answer": "Several Boston schools offer Spanish language or dual-language immersion programs. The Hernandez K-8 School in Roxbury has a well-known Spanish-English dual language program. Other schools with language options include Mozart Elementary and others across the district.",
+      "similarity_threshold": 0.45
+    },
+    {
+      "id": "p2_3",
+      "input": "What are some good elementary schools in Boston?",
+      "description": "Browsing — general elementary — bot should return school names without gatekeeping",
+      "required_keywords": [],
+      "forbidden_keywords": ["i can't help without your address", "need your address"],
+      "db_query": {"query": "elementary school", "grade": 3, "top_k": 5},
+      "reference_answer": "Boston has many elementary schools. Some popular options include the Hernandez K-8, Mozart Elementary, and various BPS neighborhood schools. Would you like to narrow down by neighborhood, programs, or other preferences?",
+      "similarity_threshold": 0.40
+    }
+  ],
+  "partition3_clarification": [
+    {
+      "id": "p3_1",
+      "input": "I want a school with after-school care and a language program",
+      "description": "Partial info — missing grade — bot should ask clarifying question",
+      "required_keywords": [],
+      "forbidden_keywords": [],
+      "must_contain_question": true,
+      "should_ask_grade_or_age": true,
+      "max_school_recommendations": 2,
+      "reference_answer": "That's great — after-school care and language programs are wonderful features to look for! To help narrow down the best options, could you tell me what grade your child will be entering? Also, is there a particular language you have in mind, or are you open to any language program?",
+      "similarity_threshold": 0.50
+    },
+    {
+      "id": "p3_2",
+      "input": "Looking for something safe with good teachers",
+      "description": "Vague preferences — bot should ask for grade/age and more specifics",
+      "required_keywords": [],
+      "forbidden_keywords": [],
+      "must_contain_question": true,
+      "should_ask_grade_or_age": true,
+      "max_school_recommendations": 2,
+      "reference_answer": "I'd love to help you find the right school! To point you in the right direction, could you share what grade your child will be entering? Any other preferences like neighborhood, programs, or school type would also be helpful.",
+      "similarity_threshold": 0.50
+    },
+    {
+      "id": "p3_3",
+      "input": "My kid loves soccer and math. What school is best?",
+      "description": "Interests given but no grade — bot should ask clarifying question",
+      "required_keywords": [],
+      "forbidden_keywords": [],
+      "must_contain_question": true,
+      "should_ask_grade_or_age": true,
+      "max_school_recommendations": 2,
+      "reference_answer": "Those are great interests! Boston has schools with strong math and athletics programs. Before I suggest specific schools, what grade will your child be entering? That will help me find the best match.",
+      "similarity_threshold": 0.50
+    }
+  ],
+  "partition4_full_search": [
+    {
+      "id": "p4_1",
+      "input": "3rd grade, Jamaica Plain area, looking for Spanish language program, no uniforms",
+      "description": "Full info — JP, grade 3, Spanish, no uniforms — bot should recommend 2+ schools",
+      "required_keywords": [],
+      "forbidden_keywords": [],
+      "min_school_recommendations": 2,
+      "should_have_list": true,
+      "should_reference_attributes": true,
+      "db_query": {"query": "Spanish language program no uniforms Jamaica Plain", "grade": 3, "has_language_program": 1, "top_k": 5},
+      "reference_answer": "For a 3rd grader in Jamaica Plain interested in Spanish language programs without uniforms, here are some options: 1. Hernandez K-8 School — offers a Spanish-English dual language program. 2. Mozart Elementary — Spanish language classes, no uniform policy. These schools are worth exploring for their strong language curricula.",
+      "similarity_threshold": 0.45
+    },
+    {
+      "id": "p4_2",
+      "input": "My daughter is in 7th grade, we're in Dorchester, she wants after-school programs and likes STEM",
+      "description": "Full info — Dorchester, grade 7, after-school, STEM",
+      "required_keywords": [],
+      "forbidden_keywords": [],
+      "min_school_recommendations": 2,
+      "should_have_list": true,
+      "should_reference_attributes": true,
+      "db_query": {"query": "STEM after school program", "grade": 7, "surround_care": 1, "top_k": 5},
+      "reference_answer": "For a 7th grader in Dorchester interested in STEM and after-school programs, there are several middle schools to consider. Schools with strong science and math programs that also offer extended day care include options like UP Academy Dorchester and various BPS middle schools in the area.",
+      "similarity_threshold": 0.40
+    },
+    {
+      "id": "p4_3",
+      "input": "Kindergarten, South End neighborhood, looking for a school with arts and accessibility for wheelchair",
+      "description": "Full info — South End, K2, arts, ADA accessibility",
+      "required_keywords": [],
+      "forbidden_keywords": [],
+      "min_school_recommendations": 2,
+      "should_have_list": true,
+      "should_reference_attributes": true,
+      "db_query": {"query": "arts program kindergarten", "grade": 0, "ADA": 1, "top_k": 5},
+      "reference_answer": "For a kindergartener in the South End who needs ADA-accessible facilities and an arts program, here are some options to explore. BPS has several ADA-compliant schools with integrated arts programs. I'd recommend checking with the BPS Welcome Center to confirm current accessibility features.",
+      "similarity_threshold": 0.40
+    }
+  ]
+}
