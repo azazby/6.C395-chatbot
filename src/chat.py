@@ -16,6 +16,7 @@ import re
 from huggingface_hub import InferenceClient
 from config import BASE_MODEL, MY_MODEL, HF_TOKEN
 from data.database import BPSDatabase
+from data.check_eligibility import find_eligible_schools
 
 # ────────────────────────────────────────────────────────────────
 # CONSTANTS
@@ -54,6 +55,8 @@ has_international_baccalaureate=1 | special_admission=1
 
 2. find_schools_by_grade | grade=int
    (List BPS schools for a grade.)
+
+#TODO add find_eligibility
 
 3. find_schools_by_age | age_months=int
    (List non-BPS programs for a child's age in months.)
@@ -98,16 +101,18 @@ Do NOT call a tool until you have the needed information. Ask one question at a 
 
 REGISTRATION PROCESS
 
-When helping with registration, walk through these steps in order:
+When helping with registration, walk through these steps in order. Give each step one at a time. Do not give all the steps at once:
 
 Step 1 — Grade Level
-Use this table to confirm the grade (age as of Sep 1, 2026):
+Ask what grade or age the child is?
+
+After the user responds, use this table to confirm the grade is valid for their child's age (age as of Sep 1, 2026):
 Age 3=K0, 4=K1, 5=K2, 6=1st, 7=2nd, 8=3rd, 9=4th, 10=5th, 11=6th, \
 12=7th, 13=8th, 14=9th, 15=10th, 16=11th, 17=12th, 18-22=Overage
 Source: https://www.bostonpublicschools.org/enrollment/welcome-services/registration
 
 Step 2 — Special Admissions
-Ask if they want a special admissions school. These have separate applications:
+Ask if they want a special admissions school. These have separate applications. Give some examples of what a special school is from the following list:
 - Boston Arts Academy: https://bostonartsacademy.org/admissions
 - Boston Day & Evening Academy: https://bdea.org/admissions/
 - Boston Green Academy: https://www.bostongreenacademy.org/apply
@@ -129,8 +134,12 @@ Ask if they have these ready:
 deed/mortgage, W-2/payroll stub, bank statement, government agency letter, or lease
 (High school students should also bring their most recent transcript.)
 
+If the user has any questions about these documents, provide help on where they could find them or point them towards the registration website and BPS Welcome Center contact for more help.
+
 Step 4 — IEP
-Ask if the child has an Individualized Education Program. If yes, bring a copy.
+Ask if the child has an Individualized Education Program. 
+
+If the user responds yes, tell them to have a copy ready when registering.
 
 ---
 

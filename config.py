@@ -5,10 +5,11 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-BASE_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
+# BASE_MODEL = "meta-llama/Llama-3.1-8B-Instruct"
+# BASE_MODEL = "Jackrong/Qwen3.5-27B-Claude-4.6-Opus-Reasoning-Distilled"
 # Other options:
 # MODEL = "HuggingFaceTB/SmolLM3-3B"
-# MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
+BASE_MODEL = "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
 
 # If you finetune the model or change it in any way, save it to huggingface hub, then set MY_MODEL to your model ID. The model ID is in the format "your-username/your-model-name".
 MY_MODEL = None
