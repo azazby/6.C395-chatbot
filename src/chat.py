@@ -16,6 +16,7 @@ import re
 from huggingface_hub import InferenceClient
 from config import BASE_MODEL, MY_MODEL, HF_TOKEN
 from data.database import BPSDatabase
+from data.check_eligibility import find_eligible_schools
 
 # ────────────────────────────────────────────────────────────────
 # CONSTANTS
@@ -54,7 +55,7 @@ has_international_baccalaureate=1 | special_admission=1
 
 2. find_schools_by_grade | grade=int
    (List BPS schools for a grade.)
-   
+
 #TODO add find_eligibility
 
 3. find_schools_by_age | age_months=int
