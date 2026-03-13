@@ -302,6 +302,119 @@ class BPSDatabase:
 
         return soft_results
 
+    # --- Filter Based on Preferences ---
+
+    def filter_based_on_preferences(self, school_ids: list, **preferences) -> dict:
+        """
+        Filter eligible school IDs by preferences. Returns results split by
+        BPS vs non-BPS, with BPS schools semantically ranked when a query is provided.
+
+        Args:
+            school_ids: List of school IDs (from find_eligible_schools). Required, cannot be empty.
+            **preferences: Optional filters (query, top_k, ADA, UPK, has_language_program, etc.)
+
+        Returns:
+            Dict with bps_schools, non_bps_schools, bps_count, non_bps_count, notes.
+        """
+        if not school_ids:
+            return {
+                "error": "school_ids is required and cannot be empty. Call find_eligible_schools first to get eligible school IDs.",
+                "bps_schools": [],
+                "non_bps_schools": [],
+                "notes": [],
+            }
+
+        query = preferences.pop("query", None)
+        top_k = preferences.pop("top_k", 10)
+        lat = preferences.pop("lat", None)
+        lon = preferences.pop("lon", None)
+        radius_miles = preferences.pop("radius_miles", 1.0)
+        provider_type = preferences.pop("provider_type", None)
+
+        # Build SQL with ID constraint + optional filters
+        placeholders = ",".join("?" for _ in school_ids)
+        sql = f"SELECT * FROM schools WHERE id IN ({placeholders})"
+        params = list(school_ids)
+
+        if provider_type:
+            sql += " AND provider_type = ?"
+            params.append(provider_type)
+
+        allowed_bools = {
+            "UPK", "ADA", "accepts_ccfa", "headstart", "has_language_program",
+            "has_advanced_placement", "has_international_baccalaureate", "uniform",
+            "special_admission", "surround_care", "build_care", "tuition",
+        }
+        for key, val in preferences.items():
+            if key in allowed_bools and val is not None:
+                sql += f" AND {key} = ?"
+                params.append(val)
+
+        cur = self.conn.execute(sql + " ORDER BY school", params)
+        rows = [dict(r) for r in cur.fetchall()]
+
+        # Post-filter by distance
+        if lat is not None and lon is not None:
+            filtered = []
+            for r in rows:
+                if r["latitude"] and r["longitude"]:
+                    dist = haversine_miles(lat, lon, r["latitude"], r["longitude"])
+                    if dist <= radius_miles:
+                        r["distance_miles"] = round(dist, 2)
+                        filtered.append(r)
+            rows = sorted(filtered, key=lambda x: x["distance_miles"])
+
+        # Split BPS vs non-BPS
+        bps_rows = [r for r in rows if r["provider_type"] == "Boston Public School"]
+        non_bps_rows = [r for r in rows if r["provider_type"] != "Boston Public School"]
+
+        bps_count = len(bps_rows)
+        non_bps_count = len(non_bps_rows)
+        notes = []
+
+        # Semantic ranking for BPS if query provided
+        if query and bps_rows:
+            bps_ids = set(str(r["id"]) for r in bps_rows)
+            ranked = self.semantic_search(query, top_k=len(bps_rows), pre_filter_ids=bps_ids)
+
+            ranked_ids = [r["id"] for r in ranked]
+            score_map = {r["id"]: r["score"] for r in ranked}
+
+            # Build ranked BPS list: ranked first, then unranked
+            bps_by_id = {str(r["id"]): r for r in bps_rows}
+            ranked_bps = []
+            for rid in ranked_ids:
+                if str(rid) in bps_by_id:
+                    row = bps_by_id.pop(str(rid))
+                    row["score"] = score_map[rid]
+                    ranked_bps.append(row)
+            # Append any BPS schools not in FAISS results
+            for row in sorted(bps_by_id.values(), key=lambda x: x["school"]):
+                ranked_bps.append(row)
+
+            bps_rows = ranked_bps
+
+        if query and non_bps_count > 0:
+            notes.append(
+                f"Non-BPS schools cannot be ranked by their semantic preference "
+                f"'{query}' because detailed program descriptions are not publicly "
+                f"available for these providers, tell this to the user."
+            )
+
+        if bps_count == 0 and non_bps_count == 0:
+            notes.append(
+                "No schools matched the given filters. Tell the user to broaden "
+                "their criteria or to reach out to their eligible schools for more information."
+            )
+
+        return {
+            "bps_schools": bps_rows[:top_k],
+            "non_bps_schools": non_bps_rows[:top_k],
+            "bps_count": bps_count,
+            "non_bps_count": non_bps_count,
+            "notes": notes,
+        }
+
     # --- Utility methods ---
 
     def get_school_detail(self, school_id: str) -> dict:

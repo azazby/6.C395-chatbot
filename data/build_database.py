@@ -322,7 +322,8 @@ CREATE TABLE schools (
     state_report_card           TEXT,
     point_of_contact            TEXT,
     school_leader               TEXT,
-    build_care                  INTEGER
+    build_care                  INTEGER,
+    description                 TEXT
 );
 
 CREATE INDEX idx_provider_type ON schools(provider_type);
@@ -344,7 +345,7 @@ INSERT INTO schools VALUES (
     :uniform, :UPK, :ADA,
     :special_admission, :special_admission_link,
     :school_quality_framework, :state_report_card,
-    :point_of_contact, :school_leader, :build_care
+    :point_of_contact, :school_leader, :build_care, :description
 )
 """
 
@@ -402,6 +403,7 @@ def transform_school(s: dict) -> dict:
         "point_of_contact": strip_or_empty(s.get("point_of_contact")),
         "school_leader": strip_or_empty(s.get("school_leader")),
         "build_care": bool_yes(s.get("BuildCare")),
+        "description": build_description(s) if is_bps else None,
     }
 
 

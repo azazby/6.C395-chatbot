@@ -5,10 +5,14 @@ Designed for Llama 3.1 8B Instruct.
 
 Instead of native tool calling (which 8B models handle unreliably),
 the model outputs a simple tag like:
-    [TOOL: search | grade=2 | provider_type=Boston Public School]
+    [TOOL: find_eligible_schools | grade_level=K2 | street_address=123 Main St | zip_code=02118]
 
-Our code detects the tag, parses it, executes the query against
-BPSDatabase, and feeds the results back for the model to summarize.
+Our code detects the tag, parses it, executes the query, and feeds
+the results back for the model to summarize.
+
+Two tools:
+  1. find_eligible_schools — calls Avela API for eligible school IDs
+  2. filter_based_on_preferences — filters/ranks eligible schools by user preferences
 """
 
 import json
@@ -16,7 +20,7 @@ import re
 from huggingface_hub import InferenceClient
 from config import BASE_MODEL, MY_MODEL, HF_TOKEN
 from data.database import BPSDatabase
-from data.check_eligibility import find_eligible_schools
+from data.check_eligibility import find_eligible_schools as _find_eligible_schools
 
 # ────────────────────────────────────────────────────────────────
 # CONSTANTS
@@ -46,36 +50,44 @@ The system will run the query and give you the results, then you respond.
 Format:
 [TOOL: function_name | arg1=value1 | arg2=value2]
 
-Available functions and their arguments:
+Available functions:
 
-1. search | query=text | grade=int | provider_type=text | top_k=int | \
-has_advanced_placement=1 | has_language_program=1 | surround_care=1 | ADA=1 | \
-has_international_baccalaureate=1 | special_admission=1
-   (Main search. Grade encoding: K0=-2, K1=-1, K2=0, 1-12 as integers.)
+1. find_eligible_schools
+   Finds schools a student is eligible to attend based on grade, address, and language.
+   REQUIRED args: grade_level, street_address, zip_code
+   OPTIONAL args: home_language (default English), city (default Boston), state (default MA)
+   grade_level values: K0, K1, K2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+   Returns: eligible_school_ids (list of ID strings), eligible_count (int)
 
-2. find_schools_by_grade | grade=int
-   (List BPS schools for a grade.)
-
-#TODO add find_eligibility
-
-3. find_schools_by_age | age_months=int
-   (List non-BPS programs for a child's age in months.)
-
-4. semantic_search | query=text | top_k=int
-   (Search school descriptions by topic, e.g. "strong arts and soccer".)
-
-5. get_school_detail | school_id=text
-   (Get full details for one school by its ID.)
-
-6. get_all_provider_types
-   (List all school/program categories.)
+2. filter_based_on_preferences
+   Filters and ranks the eligible schools by user preferences.
+   The system automatically uses the school IDs from the most recent find_eligible_schools call.
+   You do NOT need to pass school_ids — they are stored for you.
+   OPTIONAL args:
+     query=text              (natural language preference, e.g. "strong arts and music")
+     top_k=int               (max results per category, default 10)
+     ADA=1                   (ADA accessible)
+     UPK=1                   (has Universal Pre-K)
+     has_language_program=1   (has language/bilingual program)
+     has_advanced_placement=1 (has AP courses)
+     has_international_baccalaureate=1 (has IB program)
+     special_admission=1     (exam/audition school)
+     surround_care=1         (has before/after school care)
+     accepts_ccfa=1          (accepts childcare financial assistance)
+     headstart=1             (Head Start program)
+     build_care=1            (has BuildCare)
+     uniform=1               (requires uniform)
+     tuition=1               (charges tuition)
+     provider_type=text      (e.g. "Boston Public School", "Family Child Care")
+     lat=float               (latitude for proximity search)
+     lon=float               (longitude for proximity search)
+     radius_miles=float      (search radius, default 1.0)
+   Returns: bps_schools (list), non_bps_schools (list), bps_count, non_bps_count, notes
 
 Examples:
-[TOOL: search | grade=2 | provider_type=Boston Public School]
-[TOOL: semantic_search | query=strong math and soccer program | top_k=5]
-[TOOL: get_school_detail | school_id=bps-1234]
-[TOOL: find_schools_by_grade | grade=7]
-[TOOL: get_all_provider_types]
+[TOOL: find_eligible_schools | grade_level=K2 | street_address=123 Main St | zip_code=02118]
+[TOOL: filter_based_on_preferences | query=strong arts program | top_k=5]
+[TOOL: filter_based_on_preferences | ADA=1 | has_language_program=1]
 
 RULES:
 - Output ONLY the [TOOL: ...] tag when you need data. No other text.
@@ -83,19 +95,31 @@ RULES:
 - After you receive results, respond to the user in plain friendly language. \
   Never show raw data, JSON, or tool tags in your response to the user.
 - If results are empty, say so honestly and suggest next steps.
+- If the results contain a "notes" field, read the notes and follow their instructions.
 - Always end informational responses with a Source: line and link when possible.
+- Use the "description" field of BPS schools to understand each school's programs and culture.
 
 ---
 
-BEFORE LOOKING UP SCHOOLS, ASK THESE QUESTIONS FIRST
+CONVERSATION FLOW
 
-You must collect this info from the user before calling a tool:
-- What grade or age is the child?
-- Are they looking for a Boston Public School specifically?
-If they want school recommendations, also ask:
-- What are the child's interests? (sports, subjects, programs, etc.)
+Step 1: Collect eligibility info from the user (ask one question at a time):
+  - What grade or age is the child? (Use: Age 3=K0, 4=K1, 5=K2, 6=1st, etc.)
+  - What is their home address and zip code?
+  - What language is spoken at home?
 
-Do NOT call a tool until you have the needed information. Ask one question at a time.
+Step 2: Call find_eligible_schools to get eligible school IDs.
+
+Step 3: Ask about the child's interests and needs:
+  - What are the child's interests? (sports, arts, STEM, languages, etc.)
+  - Any practical needs? (accessibility, before/after care, uniform preference, etc.)
+
+Step 4: Call filter_based_on_preferences with the eligible IDs and user preferences.
+
+Step 5: Present results using the returned data. Use the description field for BPS \
+schools to explain why each school might be a good fit.
+
+Do NOT call a tool until you have the needed information.
 
 ---
 
@@ -145,11 +169,11 @@ If the user responds yes, tell them to have a copy ready when registering.
 
 FINDING THE RIGHT SCHOOL
 
-Step 1: Ask if they want BPS or non-BPS (childcare/preschool).
-Step 2 (BPS): Tell them to check eligibility at https://boston.explore.avela.org/ \
-and ask them to share their list of eligible schools.
-Step 3: Ask about the child's interests (sports, academics, programs, practical needs).
-Step 4: Use a tool to look up the schools, then recommend the top 5 with reasons.
+Step 1: Collect grade, address, zip code, and home language from the user.
+Step 2: Call find_eligible_schools to get the list of eligible school IDs.
+Step 3: Ask about the child's interests and practical needs.
+Step 4: Call filter_based_on_preferences with eligible IDs + preferences.
+Step 5: Present results, using the description field for BPS schools to explain fit.
 
 ---
 
@@ -184,10 +208,7 @@ class Chatbot:
 
     # All recognized tool names
     TOOL_NAMES = {
-        "search", "find_schools_by_grade", "find_schools_by_age",
-        "find_schools_near", "find_schools_by_provider_type",
-        "find_schools_by_filters", "semantic_search",
-        "get_school_detail", "get_all_provider_types",
+        "find_eligible_schools", "filter_based_on_preferences",
     }
 
     # Regex to match [TOOL: function_name | arg=val | arg=val]
@@ -202,6 +223,7 @@ class Chatbot:
         model_id = MY_MODEL if MY_MODEL else BASE_MODEL
         self.client = InferenceClient(model=model_id, token=HF_TOKEN)
         self.db = BPSDatabase()
+        self._eligible_ids = []  # populated by find_eligible_schools, used by filter_based_on_preferences
 
     # ── Parse [TOOL: ...] tags ────────────────────────────────
 
@@ -291,37 +313,33 @@ class Chatbot:
     # ── Tool execution ────────────────────────────────────────
 
     def _execute_tool(self, fn_name, args):
-        """Dispatch a tool call to BPSDatabase. Returns JSON string."""
+        """Dispatch a tool call. Returns JSON string."""
         try:
-            if fn_name == "search":
-                result = self.db.search(**args)
-            elif fn_name == "find_schools_by_grade":
-                result = self.db.find_schools_by_grade(**args)
-            elif fn_name == "find_schools_by_age":
-                result = self.db.find_schools_by_age(**args)
-            elif fn_name == "find_schools_near":
-                result = self.db.find_schools_near(**args)
-            elif fn_name == "find_schools_by_provider_type":
-                result = self.db.find_schools_by_provider_type(**args)
-            elif fn_name == "find_schools_by_filters":
-                result = self.db.find_schools_by_filters(**args)
-            elif fn_name == "semantic_search":
-                if "pre_filter_ids" in args and args["pre_filter_ids"] is not None:
-                    args["pre_filter_ids"] = set(args["pre_filter_ids"])
-                result = self.db.semantic_search(**args)
-            elif fn_name == "get_school_detail":
-                result = self.db.get_school_detail(**args)
-            elif fn_name == "get_all_provider_types":
-                result = self.db.get_all_provider_types()
+            if fn_name == "find_eligible_schools":
+                result = _find_eligible_schools(**args)
+                if result.get("error"):
+                    return json.dumps({"error": result["error"]})
+                # Store eligible IDs on the instance for filter_based_on_preferences
+                self._eligible_ids = [
+                    str(s["id"]) for s in result.get("eligible_schools", [])
+                ]
+                return json.dumps({
+                    "eligible_school_ids": self._eligible_ids,
+                    "eligible_count": len(self._eligible_ids),
+                })
+
+            elif fn_name == "filter_based_on_preferences":
+                if not self._eligible_ids:
+                    return json.dumps({
+                        "error": "No eligible schools found yet. Call find_eligible_schools first."
+                    })
+                result = self.db.filter_based_on_preferences(
+                    self._eligible_ids, **args
+                )
+                return json.dumps(result, default=str)
+
             else:
                 return json.dumps({"error": f"Unknown tool: {fn_name}"})
-
-            if isinstance(result, list) and len(result) > MAX_TOOL_RESULT_ITEMS:
-                total = len(result)
-                result = result[:MAX_TOOL_RESULT_ITEMS]
-                result.append({"_note": f"Showing {MAX_TOOL_RESULT_ITEMS} of {total} results"})
-
-            return json.dumps(result, default=str)
 
         except Exception as e:
             return json.dumps({"error": str(e)})
