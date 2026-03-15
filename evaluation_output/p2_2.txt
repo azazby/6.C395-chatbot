@@ -1,0 +1,24 @@
+=== BPS Chatbot Evaluation — p2_2 ===
+Partition : partition2_browsing
+Timestamp : 2026-03-15 00:52:33
+Model     : llama-3.1-8b-instant (via Groq)
+
+--- USER INPUT ---
+What schools have Spanish immersion programs?
+
+--- CHATBOT RESPONSE ---
+To find schools with Spanish immersion programs, I'll need to run the tool to filter schools based on your preference. Please provide the following information:
+
+1. The child's grade or age
+2. Their home address and zip code
+3. The language spoken at home
+
+Once I have this information, I can run the tool to find eligible schools and then filter them based on Spanish immersion programs.
+
+--- RULE-BASED CHECKS ---
+  ✗ names_at_least_one_school
+  ✓ no_gatekeeping
+  ✓ response_not_empty
+
+--- GEMINI GRADE (gemini-2.0-flash-lite) ---
+  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 27.897022645s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}]
