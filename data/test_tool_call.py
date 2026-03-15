@@ -20,4 +20,10 @@ args = {
 }
 
 result = handle_tool_call("find_eligible_schools", args)
-print(json.dumps(result, indent=2))
+print(type(result))
+print(result.keys())
+bps = [item for item in result['eligible_schools'] if item['provider_type']=='Boston Public School']
+
+# what if we clean every row only only keep non-empty attributes
+# print(bps)
+print(json.dumps(bps, indent=2))
