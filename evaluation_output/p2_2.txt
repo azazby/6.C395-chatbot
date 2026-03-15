@@ -1,24 +1,44 @@
 === BPS Chatbot Evaluation — p2_2 ===
 Partition : partition2_browsing
-Timestamp : 2026-03-15 00:52:33
+Timestamp : 2026-03-15 14:23:45
 Model     : llama-3.1-8b-instant (via Groq)
 
 --- USER INPUT ---
 What schools have Spanish immersion programs?
 
 --- CHATBOT RESPONSE ---
-To find schools with Spanish immersion programs, I'll need to run the tool to filter schools based on your preference. Please provide the following information:
+In Boston, here are some schools with Spanish immersion programs:
 
-1. The child's grade or age
-2. Their home address and zip code
-3. The language spoken at home
+1. **Boston Latin School** - While not entirely Spanish immersion, it offers a Spanish language and culture program that allows students to take classes in Spanish and participate in cultural activities.
+2. **O'Bryant High School** - Offers a Spanish immersion program that allows students to earn a high school diploma and a Spanish language proficiency certification.
+3. **Rindge & Latin High School**: Offers Spanish and French language immersion programs.
+4. **English High School**: Offers a Spanish immersion program that emphasizes language acquisition and cultural immersion.
+5. **Roxbury Preparatory Charter School** - Offers a Spanish immersion program that focuses on language acquisition and cultural exchange.
+6. **Boston Community Leadership Academy** - Offers a Spanish immersion program that includes language classes, cultural events, and community service projects.
 
-Once I have this information, I can run the tool to find eligible schools and then filter them based on Spanish immersion programs.
+Keep in mind that programs and availability may change, and it's essential to contact these schools for the most up-to-date information.
+
+Additionally, some charter schools and private schools in Boston offer Spanish immersion programs. Some examples include:
+
+- **Boston International High School** (private)
+- **Fenway High School** (charter)
+- **Madison Park Technical Vocational High School** (charter)
+- **Community Day Charter Public School** (charter)
+- **Excel Academy** (charter)
+- **Boston Arts Academy** (charter)
+
+Please note that this list is not exhaustive, and it's always best to research and contact the schools directly for more information on their programs.
 
 --- RULE-BASED CHECKS ---
-  ✗ names_at_least_one_school
+  ✓ names_at_least_one_school
   ✓ no_gatekeeping
   ✓ response_not_empty
 
---- GEMINI GRADE (gemini-2.0-flash-lite) ---
-  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 27.897022645s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '27s'}]}}]
+--- GEMINI GRADE (gemini-2.5-flash) ---
+  relevance: 5/5
+  accuracy: 1/5
+  helpfulness: 2/5
+  completeness: 4/5
+  eligibility_handling: 5/5
+  comments: The response is highly relevant and correctly avoids gatekeeping, providing a good number of schools and acknowledging the list is not exhaustive. However, its accuracy is very poor. Rindge & Latin High School is in Cambridge, not Boston. Additionally, several Boston Public Schools (Boston International, Fenway, Madison Park, Boston Arts Academy) are incorrectly labeled as private or charter schools. These significant factual errors make the response misleading and unhelpful for a Boston parent.
+  AVERAGE: 3.4/5

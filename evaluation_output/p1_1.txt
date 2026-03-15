@@ -1,24 +1,66 @@
 === BPS Chatbot Evaluation — p1_1 ===
 Partition : partition1_eligibility
-Timestamp : 2026-03-15 00:51:58
+Timestamp : 2026-03-15 14:23:00
 Model     : llama-3.1-8b-instant (via Groq)
 
 --- USER INPUT ---
 What schools can my kid go to?
 
 --- CHATBOT RESPONSE ---
-📚 I'd be happy to help you find schools for your child. To get started, can you please tell me:
+Boston has a wide range of excellent schools to choose from, depending on your child's age, interests, and your family's needs. Here are some options to consider:
 
-1. What grade or age is your child? (Use: Age 3=K0, 4=K1, 5=K2, 6=1st, etc.)
-2. What is their home address and zip code?
-3. What language is spoken at home?
+**Public Schools:**
 
-This will help me give you a list of eligible schools.
+1. **Boston Public Schools (BPS)**: Boston's public school system offers a variety of programs, including bilingual schools, arts schools, and STEM-focused schools.
+2. **Boston Latin School**: One of the oldest public schools in the US, Boston Latin is a highly selective exam school for grades 6-12.
+3. **Boston Arts Academy**: A high school that focuses on the arts, with concentrations in music, visual arts, dance, and theater.
+
+**Charter Schools:**
+
+1. **Codman Academy Charter Public School**: A high school that focuses on college preparation and community service.
+2. **Boston International Newcomers Academy**: A school for English language learners in grades K-8.
+3. **Boston Preparatory Charter Public School**: A school that focuses on college preparation and community service.
+
+**Magnet Schools:**
+
+1. **Boston Public Schools' Magnet Programs**: Boston offers several magnet programs, including a STEM program, a performing arts program, and a bilingual program.
+2. **Boston Latin Academy**: A high school that focuses on the arts and humanities.
+
+**Private Schools:**
+
+1. **Boston University Academy**: A high school that focuses on college preparation and offers a liberal arts curriculum.
+2. **The Park School**: A private K-8 school that focuses on project-based learning and outdoor education.
+3. **The Governor's Academy**: A private boarding school that offers a college preparatory curriculum.
+
+**Special Needs Schools:**
+
+1. **The MFA School**: A school for students with autism and other developmental disabilities.
+2. **The Learning Center**: A school for students with learning disabilities.
+3. **The Perkins School for the Blind**: A school for students who are blind or have low vision.
+
+**Online Schools:**
+
+1. **Boston Public Schools Online**: Boston offers online courses and programs for students who are homeschooled or need a flexible learning environment.
+
+These are just a few examples of the many schools available in Boston. To find the best fit for your child, I recommend:
+
+1. Researching schools online
+2. Visiting schools in person
+3. Talking to teachers, administrators, and current students
+4. Considering factors like location, transportation, and extracurricular activities
+
+Which type of school are you looking for? I'd be happy to help you narrow down your options!
 
 --- RULE-BASED CHECKS ---
-  ✓ mentions_eligibility_tool
-  ✓ no_specific_school_recommended
+  ✗ mentions_eligibility_tool
+  ✗ no_specific_school_recommended
   ✓ response_not_empty
 
---- GEMINI GRADE (gemini-2.0-flash-lite) ---
-  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 2.471543188s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '2s'}]}}]
+--- GEMINI GRADE (gemini-2.5-flash) ---
+  relevance: 2/5
+  accuracy: 1/5
+  helpfulness: 1/5
+  completeness: 1/5
+  eligibility_handling: 1/5
+  comments: The chatbot completely failed to address school eligibility, which was central to the user's question, and instead recommended specific schools, violating key instructions. It also contained multiple factual inaccuracies and hallucinations regarding school names and locations (e.g., The Governor's Academy, The MFA School, Perkins School for the Blind location).
+  AVERAGE: 1.2/5

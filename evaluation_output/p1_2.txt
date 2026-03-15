@@ -1,22 +1,34 @@
 === BPS Chatbot Evaluation — p1_2 ===
 Partition : partition1_eligibility
-Timestamp : 2026-03-15 00:52:02
+Timestamp : 2026-03-15 14:23:12
 Model     : llama-3.1-8b-instant (via Groq)
 
 --- USER INPUT ---
 Which schools am I eligible for?
 
 --- CHATBOT RESPONSE ---
-To find the eligible schools for your child, we need to know a few details. 📚
+To determine which schools you're eligible for, I'll need some more information from you. 
 
-What grade or age is your child? (Use: Age 3=K0, 4=K1, 5=K2, 6=1st, etc.)
+Could you please provide the following details:
 
-Please respond with the grade or age, and we'll proceed from there.
+1. What is your current grade level (or age if you're entering a new school system)?
+2. Do you live in Boston, MA, or the surrounding areas?
+3. Are you looking for a public, private, or charter school?
+4. Do you have any special needs or requirements (e.g., English language learners, gifted and talented programs)?
+5. Are there any specific schools you're interested in or areas you'd like to attend?
+
+Once I have this information, I can give you a list of schools you may be eligible for and provide additional details about each school.
 
 --- RULE-BASED CHECKS ---
   ✓ mentions_eligibility_tool
   ✓ no_specific_school_recommended
   ✓ response_not_empty
 
---- GEMINI GRADE (gemini-2.0-flash-lite) ---
-  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 58.920027953s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '58s'}]}}]
+--- GEMINI GRADE (gemini-2.5-flash) ---
+  relevance: 3/5
+  accuracy: 1/5
+  helpfulness: 1/5
+  completeness: 1/5
+  eligibility_handling: 1/5
+  comments: The chatbot correctly identifies that more information is needed to determine eligibility. However, it completely fails to mention the official BPS eligibility tool (discoverbps.org, avela, or bostonpublicschools.org) as required by the context. Instead, it incorrectly implies that the chatbot itself can provide a list of eligible schools, which is not how BPS eligibility works (it's based on home address and determined by the official tool). This makes the response inaccurate, unhelpful, and a critical failure in handling eligibility.
+  AVERAGE: 1.4/5

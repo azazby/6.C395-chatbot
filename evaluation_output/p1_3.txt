@@ -1,20 +1,64 @@
 === BPS Chatbot Evaluation — p1_3 ===
 Partition : partition1_eligibility
-Timestamp : 2026-03-15 00:52:05
+Timestamp : 2026-03-15 14:23:24
 Model     : llama-3.1-8b-instant (via Groq)
 
 --- USER INPUT ---
 Can you just tell me all the schools I can send my kid to?
 
 --- CHATBOT RESPONSE ---
-I can't provide you with a list of all the schools in Boston, but I can guide you through the process of finding eligible schools for your child. 
+That's a big request. Boston has a wide range of public and private schools, each with its own unique features and qualities. I'd be happy to provide you with a comprehensive list, but keep in mind that this might be overwhelming.
 
-To get started, I need some information from you. Can you tell me what grade or age your child is?
+Here's a general overview of the types of schools in Boston:
+
+**Public Schools:**
+
+1. Boston Public Schools (BPS) - a district with over 125 schools
+2. Boston Charter Schools - 32 charter schools offering innovative programs
+3. Boston Pilot Schools - 15 schools that experiment with new approaches to education
+4. Boston Special Education Schools - 17 schools that cater to students with special needs
+5. Boston Vocational Schools - 4 schools that focus on career and technical education
+
+**Private Schools:**
+
+1. Catholic Schools - 26 schools affiliated with the Catholic Archdiocese of Boston
+2. Independent Schools - 43 schools that are privately funded and operated
+3. Montessori Schools - 10 schools that follow the Montessori method
+4. Waldorf Schools - 2 schools that follow the Waldorf educational philosophy
+5. Special Needs Schools - several schools that cater to students with special needs
+
+Here's a list of some notable public and private schools in Boston:
+
+**Public Schools:**
+
+1. Boston Latin School (one of the oldest public schools in the US)
+2. Roxbury Latin School (public school with a focus on humanities)
+3. English High School (public school with a strong focus on STEM)
+4. Boston Arts Academy (public school with a focus on arts education)
+5. Madison Park Technical Vocational High School (public school with a focus on career and technical education)
+
+**Private Schools:**
+
+1. Boston University Academy (private school affiliated with Boston University)
+2. The Park School (private school with a focus on child-centered learning)
+3. The Newman School (private school with a focus on Jesuit values)
+4. The Winsor School (private school with a focus on girls' education)
+5. The Cambridge School of Weston (private school with a focus on arts and humanities)
+
+This is just a small sample of the many schools available in Boston. I recommend researching each school to find the best fit for your child's needs and interests. You can also contact the Boston Public Schools or the Massachusetts Department of Elementary and Secondary Education for more information.
+
+Is there a specific type of school or location you're interested in? I can provide more tailored recommendations.
 
 --- RULE-BASED CHECKS ---
-  ✓ mentions_eligibility_tool
-  ✓ no_specific_school_recommended
+  ✗ mentions_eligibility_tool
+  ✗ no_specific_school_recommended
   ✓ response_not_empty
 
---- GEMINI GRADE (gemini-2.0-flash-lite) ---
-  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 55.31950174s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '55s'}]}}]
+--- GEMINI GRADE (gemini-2.5-flash) ---
+  relevance: 2/5
+  accuracy: 2/5
+  helpfulness: 1/5
+  completeness: 1/5
+  eligibility_handling: 1/5
+  comments: The response completely fails to address the user's core need regarding school eligibility. It does not mention the official eligibility tool (discoverbps.org, avela, or bostonpublicschools.org) as required. Furthermore, it incorrectly recommends specific schools, which is explicitly against the guidelines as eligibility depends on the home address. It also contains a significant factual error by listing Roxbury Latin School as a public school when it is a private institution. While it provides a general overview of school types, this information is not genuinely useful for a parent trying to find eligible schools for their child and is actively misleading.
+  AVERAGE: 1.4/5

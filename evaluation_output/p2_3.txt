@@ -1,28 +1,42 @@
 === BPS Chatbot Evaluation — p2_3 ===
 Partition : partition2_browsing
-Timestamp : 2026-03-15 00:52:54
+Timestamp : 2026-03-15 14:23:58
 Model     : llama-3.1-8b-instant (via Groq)
 
 --- USER INPUT ---
 What are some good elementary schools in Boston?
 
 --- CHATBOT RESPONSE ---
-There are many wonderful elementary schools in Boston. I'd be happy to help you find some that might be a good fit for your child. 
+Boston has a wide range of excellent elementary schools. Here are some highly-rated ones:
 
-To get started, I need some information from you. Please tell me:
+1. **Boston Latin School** (Elementary School Program is for grades K-4): While it's a well-known institution, they do offer an elementary program, although it's often considered more academically rigorous due to its history and preparation for the upper-level programs at Boston Latin.
 
-1. What grade or age is the child? 
-2. What is their home address and zip code?
-3. What language is spoken at home?
+2. **Higginson-Lewis K-8 School**: Higginson-Lewis is a bilingual, K-8 school with a strong focus on community engagement and academic excellence.
 
-Once I have this information, I can use our school database to find eligible schools and help you narrow down your options.
+3. **Mildred C. Hailey Academy**: Mildred C. Hailey Academy is a K-8 school with a focus on STEAM education, social-emotional learning, and community service.
 
-(Also, please note that I'll be following the rules you provided, so I won't give you any raw data or invent facts – just helpful info and guidance!)
+4. **O'Bryant School**: O'Bryant School is an innovative K-8 school that offers a project-based learning approach and focuses on character development and community engagement.
+
+5. **Edward W. Brooke Charter School**: Edward W. Brooke Charter School is a K-8 school with a focus on academic excellence, character development, and community service.
+
+6. **Citizens School**: Citizens School is a K-8 school with a focus on social-emotional learning, character development, and community engagement.
+
+7. **Eliot-Pearson Children's School**: Eliot-Pearson Children's School is a lab school for the Eliot-Pearson Department of Child Development at Tufts University, offering a K-5 program with a focus on child-centered learning.
+
+8. **Warren-Prescott K-8 School**: Warren-Prescott K-8 School is a vibrant school community with a focus on academic excellence, character development, and community engagement.
+
+These are just a few examples of the many excellent elementary schools in Boston. Keep in mind that every child is unique, and what works for one family may not work for another. It's essential to research and visit schools in person to determine the best fit for your child's needs and your family's values.
 
 --- RULE-BASED CHECKS ---
-  ✗ names_at_least_one_school
+  ✓ names_at_least_one_school
   ✓ no_gatekeeping
   ✓ response_not_empty
 
---- GEMINI GRADE (gemini-2.0-flash-lite) ---
-  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 6.592835012s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-2.0-flash-lite', 'location': 'global'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '6s'}]}}]
+--- GEMINI GRADE (gemini-2.5-flash) ---
+  relevance: 5/5
+  accuracy: 1/5
+  helpfulness: 1/5
+  completeness: 2/5
+  eligibility_handling: 4/5
+  comments: The response directly addresses the user's question by listing schools. However, it contains critical factual errors: Boston Latin School and O'Bryant School are exam schools for grades 7-12, not K-4 or K-8. Listing them as elementary schools is highly misleading. Additionally, Citizens School is an after-school program provider, not a K-8 school, and Eliot-Pearson Children's School is a lab school at Tufts University, not a Boston Public School. These inaccuracies make the response actively unhelpful and potentially confusing for a parent. While it doesn't gatekeep, it fails to provide accurate or truly useful information.
+  AVERAGE: 2.6/5

@@ -1,33 +1,44 @@
 === BPS Chatbot Evaluation — p4_2 ===
 Partition : partition4_full_search
-Timestamp : 2026-03-15 00:54:25
+Timestamp : 2026-03-15 14:25:03
 Model     : llama-3.1-8b-instant (via Groq)
 
 --- USER INPUT ---
 My daughter is in 7th grade, we're in Dorchester, she wants after-school programs and likes STEM
 
 --- CHATBOT RESPONSE ---
-📚
+As a helpful Boston school finder assistant, I'd be happy to assist you in finding suitable schools for your daughter in Dorchester that fit her interests in STEM and after-school programs.
 
-Let's find some schools that might be a good fit for your daughter.
+Dorchester is a diverse neighborhood in Boston with a range of schools that cater to different interests and needs. Here are some schools in Dorchester that offer STEM programs and after-school activities:
 
-To get started, I just need to confirm her grade level and address. Based on the information you provided, I'll assume she's in 7th grade (age 12) and you're in Dorchester.
+1. **Dorchester High School**: While your daughter is currently in 7th grade, it's worth considering Dorchester High School, which has a strong focus on STEM education. They offer courses in engineering, computer science, and biotechnology. They also have a range of after-school programs, including robotics, coding, and math teams.
+2. **Madison Park Technical Vocational High School**: This school offers a range of STEM programs, including engineering, computer science, and biotechnology. They also have a strong focus on vocational training, which could be a great fit for students interested in hands-on learning. After-school programs include robotics, coding, and math teams.
+3. **Dorchester Academy Charter School (DACS)**: DACS is a charter school that offers a STEM-focused curriculum, including courses in engineering, computer science, and biotechnology. They also have a range of after-school programs, including robotics, coding, and math teams.
+4. **Boston Day and Evening Academy (BDEA)**: BDEA is a public charter school that offers a range of STEM programs, including engineering, computer science, and biotechnology. They also have a strong focus on project-based learning and have after-school programs in robotics, coding, and math teams.
+5. **John W. Carver School of Science and Technology**: This school is a Boston Public School that focuses on STEM education, with courses in engineering, computer science, and biotechnology. They also have a range of after-school programs, including robotics, coding, and math teams.
 
-Here's the next step: I need to find out if she has any special admissions school preferences. These are schools that have separate applications and may have specific requirements. Would you like to consider any of the following special admissions schools:
+To get a better sense of which school might be the best fit for your daughter, I'd recommend visiting each school's website, reading reviews from parents and students, and scheduling tours or meetings with school administrators.
 
-- Boston Green Academy
-- Kennedy Academy for Health Careers
-- Fenway High School
+Additionally, you may want to consider the following factors when making your decision:
 
-Please let me know if any of these schools interest you, or if you'd like to explore other options.
+* Transportation: How will your daughter get to and from school each day?
+* Size: How does the school's size compare to your daughter's current school?
+* Extracurricular activities: What other activities does the school offer beyond STEM programs and after-school activities?
+* Support services: Does the school offer support services for students, such as counseling, tutoring, or academic advising?
 
-Source: https://www.bostonpublicschools.org/enrollment/welcome-services/registration
+I hope this helps you get started on your search for the perfect school for your daughter!
 
 --- RULE-BASED CHECKS ---
   ✓ recommends_2plus_schools
   ✓ uses_list_format
-  ✗ references_attributes
+  ✓ references_attributes
   ✓ response_not_empty
 
---- GEMINI GRADE (gemini-2.0-flash-lite) ---
-  Error: Error code: 429 - [{'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash-lite\nPlease retry in 35.288031351s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_input_token_count', 'quotaId': 'GenerateContentInputTokensPerModelPerMinute-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerMinutePerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}, {'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.0-flash-lite'}}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '35s'}]}}]
+--- GEMINI GRADE (gemini-2.5-flash) ---
+  relevance: 1/5
+  accuracy: 1/5
+  helpfulness: 1/5
+  completeness: 1/5
+  eligibility_handling: 1/5
+  comments: The response recommends a non-existent school ('Dorchester High School' closed in 1982) and several high schools (Madison Park, BDEA) for a 7th grader, which is completely inappropriate for the user's daughter's grade level. While it attempts to list schools and address preferences, the fundamental errors in school existence and grade-level eligibility make the entire response irrelevant, inaccurate, and unhelpful. The descriptions of STEM and after-school programs are also generic and likely boilerplate.
+  AVERAGE: 1.0/5

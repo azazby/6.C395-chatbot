@@ -108,8 +108,8 @@ def make_judge_client():
     from openai import OpenAI
 
     if GOOGLE_API_KEY:
-        JUDGE_MODEL = "gemini-2.0-flash"
-        print("✓ Judge: Google Gemini (gemini-2.0-flash) via AI Studio")
+        JUDGE_MODEL = "gemini-2.5-flash"
+        print("✓ Judge: Google Gemini (gemini-2.5-flash) via AI Studio")
         return OpenAI(
             api_key=GOOGLE_API_KEY,
             base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
