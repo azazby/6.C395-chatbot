@@ -193,8 +193,8 @@ def serves_grade(row: dict[str, Any], target_grade_num: int) -> bool:
     return False
 
 
-# def is_bps_school(row: dict[str, Any]) -> bool:
-#     return str(row.get("provider_type", "")).strip() == "Boston Public School"
+def is_bps_school(row: dict[str, Any]) -> bool:
+    return str(row.get("provider_type", "")).strip() == "Boston Public School"
 
 
 def find_eligible_schools(
@@ -271,7 +271,7 @@ def find_eligible_schools(
 
     candidate_schools = [
         row for row in all_rows
-        # if is_bps_school(row) and serves_grade(row, target_grade_num)
+        if is_bps_school(row) and serves_grade(row, target_grade_num)
         if serves_grade(row, target_grade_num)
     ]
 

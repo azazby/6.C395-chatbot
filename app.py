@@ -27,7 +27,7 @@ def create_chatbot():
     """
     chatbot = Chatbot()
     
-    def chat(message, history):
+    def chat(message, history, mode):
         """
         TODO:Generate a response for the current message in a Gradio chat interface.
         
@@ -59,26 +59,31 @@ def create_chatbot():
                 - Generate an appropriate response to the current message
                 - Return that response as a string
         """
-        return chatbot.get_response(user_input=message, history=history)
+        return chatbot.get_response(user_input=message, history=history, mode=mode)
 
     
-    
+    # Define the radio buttons for the UI
+    mode_selector = gr.Radio(
+        choices=["Find School", "Registration Guide", "Contact Info"],
+        value="Find School", # Default value
+        label="What do you need help with today?"
+    )
     # Create Gradio interface
     demo = gr.ChatInterface(
         chat,
-        title="Boston School Finder 🏫",
+        title="🏫 Boston School Finder 🔎",
+        additional_inputs=[mode_selector],
+        additional_inputs_accordion=gr.Accordion(label="Chatbot Mode", open=True),
         description=(
             "Hi! I can help you navigate Boston school registration, find the "
-            "right school for your child, or connect you with the right people. "
-            "Ask me anything! (If you see a 503 error, please try again in a "
+            "right school for your child, or connect you with the right people! "
+            "Select one of the modes below! (If you see a 503 error, please try again in a "
             "few seconds.)"
         ),
         examples=[
-            "How do I register my child for school in Boston?",
-            "My child is 6 years old — what grade would they be in?",
-            "What schools offer AP courses?",
-            "I want to talk to someone about the registration process.",
-            "What are the special admissions schools?",
+            ["How can I find the right school for my child?", "Find School"],
+            ["How do I register my child for school in Boston?", "Registration Guide"],
+            ["How can I find more information about who to contact?", "Contact Info"],
         ],
     )
  
