@@ -4,11 +4,15 @@ import json
 import logging
 from pathlib import Path
 from typing import Any
+from collections import Counter
 
 import requests
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+DATA_DIR = Path(__file__).resolve().parent / "raw_data"
+DEFAULT_DATASET_PATH = DATA_DIR / "choice_tool_raw.json"
 
 BASE_URL = "https://prod.execute-api.apply.avela.org/eligibility/organizations/boston"
 
@@ -144,7 +148,7 @@ def find_eligibility(answers: dict[str, Any]) -> tuple[dict[str, Any], str | Non
         return {"ineligibleSchools": []}, repr(e)
 
 
-def load_school_catalog(dataset_path: str) -> list[dict[str, Any]]:
+def load_school_catalog(dataset_path: str | Path) -> list[dict[str, Any]]:
     path = Path(dataset_path)
     rows = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(rows, list):
@@ -189,8 +193,8 @@ def serves_grade(row: dict[str, Any], target_grade_num: int) -> bool:
     return False
 
 
-def is_bps_school(row: dict[str, Any]) -> bool:
-    return str(row.get("provider_type", "")).strip() == "Boston Public School"
+# def is_bps_school(row: dict[str, Any]) -> bool:
+#     return str(row.get("provider_type", "")).strip() == "Boston Public School"
 
 
 def find_eligible_schools(
@@ -201,7 +205,7 @@ def find_eligible_schools(
     state: str = "MA",
     street_address_line2: str = "",
     home_language: str = "English",
-    dataset_path: str = "raw_data/choice_tool_raw.json",
+    dataset_path: str = DEFAULT_DATASET_PATH,
     include_ineligible: bool = False,
 ) -> dict[str, Any]:
     result: dict[str, Any] = {
@@ -211,6 +215,7 @@ def find_eligible_schools(
         "candidate_school_count": 0,
         "ineligible_count": 0,
         "matched_ineligible_count": 0,
+        "eligible_provider_type_counts": {},
         "error": None,
     }
 
@@ -266,7 +271,8 @@ def find_eligible_schools(
 
     candidate_schools = [
         row for row in all_rows
-        if is_bps_school(row) and serves_grade(row, target_grade_num)
+        # if is_bps_school(row) and serves_grade(row, target_grade_num)
+        if serves_grade(row, target_grade_num)
     ]
 
     candidate_ids = {normalize_id(row.get("id")) for row in candidate_schools}
@@ -286,6 +292,8 @@ def find_eligible_schools(
     result["matched_ineligible_count"] = len(matched_ineligible_ids)
     result["eligible_schools"] = eligible_schools
     result["eligible_count"] = len(eligible_schools)
+    provider_counts = Counter(str(s.get("provider_type", "")).strip() for s in eligible_schools)
+    result["eligible_provider_type_counts"] = dict(provider_counts)
 
     if include_ineligible:
         result["ineligible_schools"] = ineligible_schools
@@ -297,7 +305,8 @@ def find_eligible_schools(
 TOOL_DEFINITION = {
     "type": "function",
     "name": "find_eligible_schools",
-    "description": "Find eligible Boston Public Schools for a student based on grade, address, zip code, and home language.",
+    "description": "Find eligible Boston Public Schools for a student based on grade, address, zip code, and home language. \
+        Returns full school records from the catalog, including Boston Public Schools and non-BPS options when available.",
     "parameters": {
         "type": "object",
         "properties": {
